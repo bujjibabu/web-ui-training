@@ -11,12 +11,32 @@
 			<li>Tea</li>
 			<li>Milk</li>
 			<li>Soda</li>
+				<ul>
+					<li>Coke</li>
+						<ul>
+							<li>Diet-coke</li>
+							<li>zero-coke</li>
+						</ul>
+					<li>Pepsi</li>
+					<li>Sprite</li>
+					<li>Dr.Pepper</li>
+				</ul>
 			<li>Smoothie</li>
 			<li>Milk Shake</li>
+				<ul>
+					<li>Strawberry</li>
+					<li>Vanilla</li>
+					<li>Choclate</li>
+				</ul>
 		</ul>
 		<h4>Ordered List</h4>
 		<ol type="i">
 			<li>Coffee</li>
+				<ol type="a">
+					<li>Mocha</li>
+					<li>Caramel</li>
+					<li>Vanilla</li>
+				</ol>
 			<li>Tea</li>
 			<li>Milk</li>
 			<li>Soda</li>
@@ -24,5 +44,15 @@
 			<li>Milk Shake</li>	
 		</ol>
 	</div>
+	<form>
+		Browsers: <input type="text" list="browsers" name="browser">
+				  <datalist id="browsers">
+				  		<option value="Chrome">
+						<option value="Firefox">				  		
+						<option value="Safari">
+						<option value="Internet Explorer">
+						<option value="Opera">
+				  </datalist>
+	</form>
 </body>
 </html>

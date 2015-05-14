@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>CSS</title>
+	<style type="text/css">
+		.mydiv{
+		    color: rgb(255, 0, 29);
+			  padding: 4px;
+			  text-align: center;
+			  font-size: 30px;
+			  background: rgb(158, 154, 154);
+			  margin-left: 30%;
+			  margin-right: 30%;
+			  border-top-style: dotted;
+			  border-top-color: rgb(189, 34, 158);
+			  border-top-width: 3px;
+			  border-top-right-radius: 16px;
+			  border-top-left-radius: 16px;
+			  border-right-style: solid;
+			  border-right-color: green;
+		}
+		.main{
+		  border: 1px solid blue;
+		  margin-left: 30%;
+		  margin-right: 30%;
+		  padding: 5%;
+		  background: rgb(119, 107, 107);
+		}
+		.signin{
+			text-align: center;
+		}
+		.username,
+		.password{
+			margin-bottom: 20px;
+		  font-size: 20px;
+		  text-align: center;
+		  color: #fff;
+		}
+		.input-password{
+			height: 30px;
+  			border-radius: 14px;
+			margin-left: 4px;
+		}
+		.input-username{
+			height: 30px;
+  			border-radius: 14px;
+		}
+		.signin button{
+		  padding: 5px 112px;
+		  background: rgb(200, 200, 224);
+		  border-radius: 20px;
+		  color: rgb(10, 162, 168);
+		}
+		.myform{
+			margin-top: 10%;
+		}
+		.mybody{
+			background: url("../images/bgimage.jpg");
+			background-repeat: no-repeat;
+			background-repeat: repeat;
+		}
+	</style>
+</head>
+<body class="mybody">
+	<div class="myform">
+		<div class="mydiv">LogIn</div>
+		<div class="main">
+			<form>
+				<div class="username">
+					<label>Username:</label>
+					<input type="text" placeholder="Username" class="input-username">
+				</div>
+				<div class="password">
+					<label>Password:</label>
+					<input type="password" placeholder="Password" class="input-password">
+				</div>
+				<div class="signin">
+					<button>SignIn</button>
+				</div>
+			</form>
+		</div>
+	</div>
+</body>
+</html>

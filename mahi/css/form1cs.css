@@ -1,0 +1,55 @@
+/*.myheader{
+	border: 2px solid blue;
+	margin-left: 382px;
+    margin-right: 379px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+}*/
+.myh2{
+	border: 2px solid blue;
+	margin-left: 382px;
+    margin-right: 379px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    background-color: turquoise;
+}
+
+.mydiv1{
+	border: 2px solid red;
+	margin-left: 382px;
+    margin-right: 379px;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    background-color: tomato;
+}
+.myfirst{
+	margin-right: 10px;
+}
+.myemail{
+	padding-right: 79px;
+}
+.mymob{
+	padding-right: 77px;
+}
+.mypassword{
+	padding-right: 12px;
+}
+.mydiv2{
+	 border: 2px solid forestgreen;
+	 margin-left: 382px;
+	 margin-right: 379px;
+	 padding-bottom: 10px;
+	 padding-top: 10px;
+	 background-color: indianred;
+}
+.mydiv2 p{
+	text-align: left;
+	padding-left: 167px;
+}
+.mylab{
+	padding-right: 10px;
+}
+.mybody{
+	background-image: url(../images/bgimage1.jpg);
+}

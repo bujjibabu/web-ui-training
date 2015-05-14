@@ -1,43 +1,47 @@
 <!doctype html>
 <html>
-	
-	<body>
-		<header align="center">
-			<h1>User Registration Form</h1>
+	<head>
+		<link rel="stylesheet" type="text/css" href="../css/form1cs.css">
+	</head>
+	<body class="mybody">
+		<header class="myheader">
+			<h2 align="center" class="myh2">User Registration Form</h2>
 		</header>
-		<form>
-			<div align="center">
-				<table>
-					<tr>
-						<td>First Name <input type="text" placeholder=" Enter First Name"></td> 
-						<td>Last Name <input type="text" placeholder=" Enter Last Name"></td>
-					</tr>
-					<tr>
-						<td><input type="email" placeholder=" Email" size="31"></td> 
-						<td><input type="text" placeholder=" Mobile Number" size="31"></td>
-					</tr>
-					<tr>
-						<td>User Name <input type="text" placeholder=" Enter User Name"></td>
-						<td>Password <input type="password" placeholder=" Please enter password"></td>
-					</tr>					
-				</table>
-				<label>Address: <textarea placeholder="Enter address"></textarea></label>
-			</div>
-			<p align="center">Gender <input type="radio" name="gender"> Male <input type="radio" name="gender"> Female</p>
-			<div align="center">
-				<p>Country <select>
-							<option>India</option>
-							<option>USA</option>
-							<option>England</option>
-							<option>Germany</option>
-							<option>Australia</option>
-						</select>
-				</p>
-				<p>Birthday <input type="date"></p>
-				<p>Id Proof <input type="file"></p>
-				<p>Terms and Conditions <input type="checkbox"> Yes, I Agree</p>
-				<input type="submit" value="Sign-up">
-			</div>
-		</form>
+		<div align="center" class="main">
+			<form>
+				<div class="mydiv1">
+					<table>
+						<tr class="mytr1">
+							<td>First Name <input type="text" placeholder=" Enter First Name" class="myfirst"></td> 
+							<td>Last Name <input type="text" placeholder=" Enter Last Name" class="mylast"></td>
+						</tr>
+						<tr>
+							<td><input type="email" placeholder=" Email" class="myemail"></td> 
+							<td><input type="text" placeholder=" Mobile Number" class="mymob"></td>
+						</tr>
+						<tr>
+							<td>User Name <input type="text" placeholder=" Enter User Name" class="myusername"></td>
+							<td>Password <input type="password" placeholder=" Please enter password" class="mypassword"></td>
+						</tr>					
+					</table>
+				</div>
+				<div class="mydiv2">
+					<label class="mylab">Address: <textarea placeholder="Enter address"></textarea></label>
+					<p>Gender: <input type="radio" name="gender"> Male <input type="radio" name="gender"> Female</p>
+					<p>Country: <select>
+								<option>India</option>
+								<option>USA</option>
+								<option>England</option>
+								<option>Germany</option>
+								<option>Australia</option>
+							</select>
+					</p>
+					<p>Birthday: <input type="date"></p>
+					<p>Id Proof: <input type="file"></p>
+					<p class="tandc">Terms and Conditions: <input type="checkbox"> Yes, I Agree</p>
+					<input type="submit" value="Sign-up">
+				</div>
+			</form>
+		</div>
 	</body>
 </html>

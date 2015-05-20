@@ -1,0 +1,65 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Table2CSS</title>
+		<style type="text/css">
+		.namebox,.emailbox,.phonebox{
+			margin-left: 10px;
+			margin-bottom: 5px;
+			margin-top: 5px;
+			border-radius: 5px;
+			font-style: italic;
+		}
+		.mybody{
+			background-color: black;
+		}
+		.mytable{
+			text-align: center;
+			background-color: rgb(203, 203, 86);
+			padding: 5%;
+			border-radius: 10px;
+			margin-right: 25%;
+			margin-left: 35%;
+			margin-bottom: 15%;
+			margin-top: 15%;
+
+		}
+		.row1,.row2,.row3
+		{
+			background-color: rgb(194, 194, 203);
+			border-radius: 5px;
+		}
+		.data1,.data2,.data3{
+			border-radius: 5px;
+		}
+		.text1{
+			color: white;
+			text-align: left;
+			margin-left: 0px;
+		}
+			</style>
+	</head>
+
+<body class="mybody">
+	
+		<table class="mytable" width="30%" padding="20%" border="2" cellspacing"2">
+			<thead class="text1">
+				<tr>
+					<td>Step 1: Your Details
+					</td>
+				</tr>
+			</thead>	
+			<tbody>	
+				<tr class="row1">
+					<td class="data1">Name <input type="text" placeholder="First and last name" class="namebox"></td>
+				</tr>
+				<tr class="row2">
+					<td class="data2">Email <input type="email" placeholder="example@domain.com" class="emailbox"></td>
+				</tr>
+				<tr class="row3">
+					<td class="data3">Phone <input type="text" placeholder="Eg.+18453376003" class="phonebox"> </td>
+				</tr>
+			</tbody>
+		</table>
+</body>
+</html>

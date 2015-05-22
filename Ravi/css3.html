@@ -1,0 +1,126 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Welcome to my page</title>
+		<link rel="icon" href="Images\Mylogo.jpg" type="image/gif" sizes="16x16">
+		<style type="text/css">
+		.subbody1{
+				background-color: gray;
+ 				width: 900px;
+				margin-left: 15%;
+  				padding-bottom: 12px;
+ 				padding-top: 12px;
+			}
+		.text1{
+				margin-left: 10px;
+				text-transform: uppercase;
+				font-size: 25px;
+				font-family: "Courier New", Courier, monospace;
+				color: rgb(234, 228, 228);
+				text-shadow: 2px 2px black;
+		}
+		.text2{
+				margin-left: 10px;
+				font-size: 12px;
+		}
+		.mylist{
+				  background-color: rgb(177, 177, 226);
+				  width: 860px;
+				  margin-left: 15%;
+				  list-style-type: none;
+				  color: white;
+				  margin-top: 0px;
+				  padding-top: 7px;
+				  padding-bottom: 7px;
+				  word-spacing: 25px;
+			}
+		.mylist li{
+			display: inline;
+		}
+		.mylist li:hover{
+			color:black;
+		}
+		.marquee{
+			background-color: rgb(179, 144, 179);
+  			margin-left: 15%;
+ 			width: 900px;
+ 			margin-top: 0px;
+		}
+		/*.marquee: hover{
+			animation-play-state: paused
+		}*/
+		.mytable{
+			background-color: rgb(109, 109, 134);
+			float: right;
+  			margin-right: 18.3%;
+		}
+		.username{
+			margin-left: 4%;
+			border-radius: 5px;
+			background-color: rgb(212, 212, 224);
+			font-style: italic;
+		}
+		.password{
+			margin-left: 5.3%;
+			border-radius: 5px;
+			background-color: rgb(212, 212, 224);
+			font-style: italic;
+		}
+		.button{
+			text-align: center;
+			margin-left: 40%;
+			margin-top: 5px;
+			margin-bottom: 5px;
+			background-color: rgb(155, 155, 197);
+			color: black;
+			border-radius: 5px;
+		}
+		.button:hover{
+			color: rgb(39, 55, 103);
+			background-color: rgb(177, 177, 226);
+		}
+		.mylogin{
+			background-color: rgb(71, 86, 113);
+			font-size: 18px;
+			color:rgb(158, 131, 178);
+		}
+		.mybody{
+			background-color: rgb(66, 55, 71);
+		}
+		</style>
+
+	</head>
+	<body class="mybody">
+		<div class="subbody1">
+			<div class="text1">My Demo Page</div>  <div class="text2">Designed by Ravi Teja Vakalapudi</div>
+		</div>
+
+		<ul class="mylist">
+			<li>Home</li>
+			<li>About</li>
+			<li>Products</li>
+			<li>Services</li>
+			<li>Contact</li>
+		</ul>
+		<div class="marquee"><marquee>Welcome to my page. May name is Ravi Teja Vakalapudi. I am still learning Java UI. So this page might get a messy output. Take it easy. I wrote this paragraph to check how "marquee" works in css. Let us check if anchor tag works here. <a href="www.facebook.com" class="anchor">Click here</a> to be directed to facebook.</marquee></div>
+
+		<table class="mytable" width="20%" padding="10">
+			<thead>
+				<tr class="mylogin"><td><img src="Images\login.png" alt="Login" height="30" width="30">Login Details</td></tr>
+			</thead>
+			<tbody>
+ 				<tr>
+ 					<td>Username: <input type="text" placeholder="Username" class="username"></td>
+ 				</tr>
+ 				<tr>
+ 					<td>Password: <input type="password" placeholder="Password" class="password"></td>
+ 				</tr>
+ 				<tr>
+ 					<td><button class="button">Login</button></td>
+ 				</tr>
+			</tbody>
+
+		</table>
+
+	</body>
+</html>

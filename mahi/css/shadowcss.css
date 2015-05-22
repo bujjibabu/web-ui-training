@@ -1,0 +1,58 @@
+.mydiv{
+	background: red;
+	width:50%;
+	text-align: center;
+}
+
+.ul1 li{
+	color:blue;
+}
+.marq{
+	font-size: 20px;
+	color:red;
+	font-weight: bold;
+}
+.headerdiv{
+	width: 100%;
+	border: 2px solid salmon;
+	background: rgb(44, 137, 53);
+	color: white;
+}
+.menuitems{
+
+	list-style-type: none;
+	text-align: center;
+	/*display: none;
+	visibility: hidden;*/
+}
+/*.lab{
+	display: inline-block;
+}*/
+.menuitems li{
+
+	display: inline;
+	background: salmon;
+	color:white;
+	padding-left: 50px;
+	padding-right: 50px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	margin-right: 10px;
+}
+.menuitems li:hover{
+	color: green;
+	background: #40E0D0;
+	cursor: pointer;
+}
+.myh1{
+	border: 2px solid magenta;
+	background: magenta;
+	text-align: center;
+	font-size: 50px;
+    font-style: italic;
+    text-shadow: 10px 8px blue;
+    box-shadow: 10px 10px black;
+    width: 50%;
+    margin-left: 25%;
+    margin-right: 25%;
+}

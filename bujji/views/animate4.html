@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style> 
+div {
+    width: 100px;
+    height: 100px;
+    background: red;
+    position: relative;
+      /* Chrome, Safari, Opera */
+    -webkit-animation-name: myfirst;
+    -webkit-animation-duration: 10s;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-delay: 5s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-direction: alternate;
+    -webkit-animation-play-state: running;
+   
+    /* Standard syntax */
+    animation-name: myfirst;
+    animation-duration: 20s;
+    animation-timing-function: linear;
+    animation-delay: 5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-play-state: running;
+}
+
+/* Chrome, Safari, Opera */
+@-webkit-keyframes myfirst {
+    0%   {background: red;left:0px;top:0px;}
+    25%  {background: yellow; left:200px;top:0px;}
+    50%  {background: blue;left:200px;top:200px;}
+    75%  {background: black;left:0px;top:200px;}
+    100% {background: green;left:0px;top:0px;}
+}
+
+/* Standard syntax */
+@keyframes myfirst {
+    0%   {background: red;left:0px;top:0px;}
+    25%  {background: yellow; left:200px;top:0px;}
+    50%  {background: blue;left:200px;top:200px;}
+    75%  {background: black;left:0px;top:200px;}
+    100% {background: green;left:0px;top:0px;}
+}
+</style>
+</head>
+<body>
+
+<p><b>Note:</b> This example does not work in Internet Explorer 9 and earlier versions.</p>
+<p><b>Note:</b> When an animation is finished, it changes back to its original style.</p>
+
+<div></div>
+
+</body>
+</html>

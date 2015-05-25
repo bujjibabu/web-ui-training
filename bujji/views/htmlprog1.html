@@ -3,24 +3,56 @@
  	<head>
  		<title>html</title>
  		<link rel="icon" href="../images/html_5_logo_128.png" sizes="32x32" type="image/png">
+ 		<style type="text/css">
+ 			.left{
+ 				
+ 				margin:20px 0px;
+ 				border: 10px solid red;
+ 				padding:10px 0px;
+ 			}
+ 			.right{
+ 				margin: 10px 0px;
+ 			}
+ 			.c1+.c2{
+ 				font-family: Arial;
+ 			}
+ 			.c2{
+ 				font-family: Tahoma;
+ 			}
+ 			.c3 > .c2{
+ 				font-family: georgia;
+ 			}
+ 			.c4 .c2{
+ 				font-family: helvetica;
+ 			}
+
+ 			p{
+ 				color:blue;
+ 			}
+ 			#text{
+ 				border:1px solid red;
+ 			}
+ 			.class{
+ 				color: red;
+ 				border-color: green;
+ 			}
+ 		</style>
  	</head>
  	<body>
- 		<p>this my paragraph</p>
- 		<div>div tag</div>
- 		<div>
- 			<p>this is my para1</p>
- 			<p>this is my para1</p>
- 			<center><b>center tag</b></center>
- 			<center><u>center tag</u></center>
- 			<center><i>center tag</i></center>
- 			<div>div1</div>
- 			<div>div2</div>
- 			<span>span1</span>
- 			<span>span2</span>
- 			<center><span>Bujjibabu</span><span><sub>B.tech</sub></span></center>
- 			<center><span>Bujjibabu</span><span>1<sup>st</sup>class</span></center>
- 		</div>
- 		<a href="http://bujjibau.blogspot.in/" target="_blank">my blog</a>
- 		<a href="http://bujjibau.blogspot.in/" target="_blank"><img src="../images/html_5_logo_128.png"/></a>
+ 		<div class="right">text1</div>
+ 		<div class="left">text2</div>
+ 		<span class="1">
+ 			<span class="4">
+ 				<span class="3">
+ 					<span class="2">test</span>
+ 				</span>
+ 			</span>
+ 		</span>
+ 		<p id="text" class="class" >text</p>
+ 		<script type="text/javascript">
+ 		var s =1;
+ 		var r  = s++ *10+1;
+ 		alert(r);
+ 		</script>
  	</body>
 </html>

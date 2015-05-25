@@ -1,0 +1,68 @@
+<!doctype html>
+<html>
+<head>
+	<title>CSS</title>
+	<style type="text/css">
+		div p:first-child{
+			//background: red;
+		}
+		.gradient{
+			background: #d9349f;
+  background-image: -webkit-linear-gradient(top, #d9349f, #952bb8,red,green);
+  background-image: -moz-linear-gradient(top, #d9349f, #952bb8);
+  background-image: -ms-linear-gradient(top, #d9349f, #952bb8,red,green);
+  background-image: -o-linear-gradient(top, #d9349f, #952bb8);
+  background-image: linear-gradient(to bottom, #d9349f, #952bb8,red,green);
+  -webkit-border-radius: 28;
+  -moz-border-radius: 28;
+  border-radius: 28px;
+  text-shadow: 9px 1px 3px #666666;
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 39px;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+		}
+		.transform{
+			height: 150px;
+			width: 150px;
+			background: #000;
+			color: #fff;
+			transform:-ms-rotate(120deg);
+			transform:-moz-rotate(40deg);
+			transform:-webkit-rotate(120deg);
+			transform:-o-rotate(40deg);
+			transform:rotate(40deg);
+		}
+		.scale{
+			height: 100px;
+			width: 100px;
+			background: red;
+		}
+		.scale:hover{
+			transform:scale(0.6,1.5);
+		}
+	</style>
+</head>
+<body>
+	<marquee>HTML TRAINING </marquee>
+	<div>
+		<p>first</p>
+		<p>second</p>
+		<p>third</p>
+	</div>
+	<div>
+		<p>some</p>
+		<p>second</p>
+		<p>third</p>
+	</div>
+	<div>
+		<p>some diff</p>
+		<p>second</p>
+		<p>third</p>
+	</div>
+	<div class="gradient">gradient</div>
+	<div class="transform">Bujjibabu</div>
+	<div class="scale">Bujjibabu</div>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style> 
+.mydiv {
+    width: 100px;
+    height: 100px;
+    background: red;
+    -webkit-animation: ravi 10s; /* Chrome, Safari, Opera */
+    animation: ravi 10s;
+}
+
+/* Chrome, Safari, Opera */
+@-webkit-keyframes ravi {
+    from {background: green;}
+    to {background: yellow;}
+}
+
+/* Standard syntax */
+@keyframes ravi {
+    from {background: green;}
+    to {background: yellow;}
+}
+</style>
+</head>
+<body>
+
+<p><b>Note:</b> This example does not work in Internet Explorer 9 and earlier versions.</p>
+
+<div class="mydiv"></div>
+
+</body>
+</html>

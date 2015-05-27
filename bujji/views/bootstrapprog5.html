@@ -1,0 +1,79 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Bootstrap</title>
+		<link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
+		<style type="text/css">
+			.first-form{
+				background-color: #c0c0c0;
+  				padding: 20px;
+  				margin-bottom: 40px;
+			}
+			.form-second{
+				margin-bottom: 30px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="text-center">Bootstrap Training</div>
+			<div class="container">
+				<!-- <div class="col-sm-4"></div> -->
+				<form class="col-xs-12 col-sm-offset-4 col-sm-4 first-form">
+					<div class="form-group">
+						<label>UserName: </label>
+						<input type="text" class="form-control" placeholder="Username">
+					</div>
+					<div class="form-group">
+						<label>Password: </label>
+						<input type="text" class="form-control" placeholder="Username">
+					</div>
+					<div class="text-center form-group"><button class="btn btn-default">Sign In</button></div>
+				</form>
+				<br>
+				<form class="col-xs-12 form-inline  form-second">
+					<div class="form-group">
+						<label>UserName: </label>
+						<input type="text" class="form-control" placeholder="Username">
+					</div>
+					<div class="form-group">
+						<label>Password: </label>
+						<input type="text" class="form-control" placeholder="Username">
+					</div>
+					<div class="text-center form-group"><button class="btn btn-primary">Sign In</button></div>
+				</form>
+				<br>
+				<form class="col-xs-12 form-inline clearfix">
+					<div class="form-group">
+						<label class="sr-only">UserName: </label>
+						<input type="text" class="form-control" placeholder="Username">
+					</div>
+					<div class="form-group">
+						<label class="sr-only">Password: </label>
+						<input type="text" class="form-control" placeholder="Username">
+					</div>
+					<div class="text-center form-group"><button class="btn btn-success">Sign In</button></div>
+				</form>
+			</div>
+
+			<h2>Buttons</h2>
+				<div class="col-xs-12 clearfix">
+					<button class="btn btn-default">Sign In</button>
+					<button class="btn btn-primary">Sign In</button>
+					<button class="btn btn-success">Sign In</button>
+					<button class="btn btn-info">Sign In</button>
+					<button class="btn btn-warning">Sign In</button>
+					<button class="btn btn-danger">Sign In</button>
+				</div>
+				<div class="col-xs-12 clearfix">
+					<button class="btn btn-default btn-xs">Sign In</button>
+					<button class="btn btn-primary btn-sm">Sign In</button>
+					<button class="btn btn-success btn-md">Sign In</button>
+					<button class="btn btn-info btn-lg">Sign In</button>
+					<div class="col-sm-4">
+						<button class="btn btn-warning btn-block">Sign In</button>
+					</div>
+					<button class="btn btn-danger disabled">Sign In</button>
+				</div>
+		</div>
+	</body>
+</html>

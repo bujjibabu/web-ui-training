@@ -1,0 +1,103 @@
+//javascript
+
+toggle()
+
+if(div is open){
+	display:none;
+}else{
+	disaplay:block;
+}
+
+.togggle();
+
+//boostarp
+
+//2 divs side bysid
+
+<div class="div1"></div>
+<div class="div2"></div>
+
+//css
+.div1{
+	float:left;
+	width:50%
+}
+.div2{
+	float:left;
+	width:50%
+}
+
+//boostarp
+<div class="col-xs-6"></div>
+<div class="col-xs-6"></div>
+
+
+//bootstrapcss
+<div class="col-xs-12 col-sm-8 col-md-6 col-lg-4 somecls"></div>
+
+
+//css
+
+@media and (max-width:320px){
+	.somecls{
+		width:100%;
+		height:auto;
+		padding-left:15px;
+		padding-right:15px;
+	}
+}
+@media and (max-width:768px){
+	.somecls{
+		width:80%;
+		height:auto;
+		padding-left:15px;
+		padding-right:15px;
+	}
+}
+
+@media and (max-width:992px){
+	.somecls{
+		width:60%;
+		height:auto;
+		padding-left:15px;
+		padding-right:15px;
+	}
+}
+
+@media and (min-width:1200px){
+	.somecls{
+		width:40%;
+		height:auto;
+		padding-left:15px;
+		padding-right:15px;
+	}
+}
+
+
+MVC
+
+M -> model //dealing with data
+
+V -> views //partials or html pages
+
+C -> controller // business logic
+
+
+//ajax 
+
+
+var data = [
+{name:'bujji',mobile:9533068603,pin:532459},
+{name:'bujji',mobile:9533068603,pin:532459},
+{name:'bujji',mobile:9533068603,pin:532459}
+];
+
+
+$.ajax({
+  type: "GET",
+  url: "https:192.168.312/venkat/getusers"
+}).success(function( data ) {
+   var result = data;
+  }).error(function(data){
+	alert('some error please try again');
+});

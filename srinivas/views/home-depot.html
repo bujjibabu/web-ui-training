@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Home Depot</title>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
+	<style type="text/css">
+	.entire-page
+	{
+		min-height: 1920px; 
+		min-width: 1080px;
+	}
+	.report-header
+	{
+		background-color: #ff8f40;
+		color: #ffffff;
+		height: 216px;
+		padding-top: 50px;
+		padding-bottom: 50px; 
+	}
+	.left-arrow
+	{
+		padding-left: 50px;
+	}
+	.cog-symbol
+	{
+		padding-right: 50px;
+	}
+	.report-title
+	{
+		padding-top: 100px;
+		padding-bottom: 100px;
+		padding-left: 50px;
+		color: #4d4d4d;
+	}
+	.dd-lists
+	{
+		margin-left: 50px;
+		float: left;
+	}
+	.dd-list1
+	{
+		padding-top: 25px;
+		margin-left: 50px;
+		border: 4px solid #cccccc;
+		color: #4d4d4d;
+		font-size: 35px;
+		height: 120px;
+		width: 310px;
+	}
+	.dd-list2
+	{
+		padding-top: 25px;
+		margin-left: 25px;
+		margin-right: 25px;
+		border: 4px solid #cccccc;
+		font-size: 35px;
+		color: #4d4d4d;
+		height: 120px;
+		width: 310px;
+		float: left;
+	}
+	.dd-list3
+	{
+		padding-top: 25px;
+		margin-right: 50px; 
+		border: 4px solid #cccccc;
+		font-size: 35px;
+		color: #4d4d4d;
+		height: 120px;
+		width: 310px;
+		float: left;
+	}
+	.display-totals
+	{
+		margin-top: 100px;
+		margin-bottom: 100px;
+		margin-left: 50px;
+		float: left;
+	}
+	.scheduled-total
+	{
+		padding-top: 25px;
+		background-color: #ff8f40;
+		color: #ffffff;
+		font-size: 35px;
+		height: 240px;
+		width: 310px;
+	}
+	.actual-total
+	{
+		padding-top: 25px;
+		margin-left: 25px;
+		margin-right: 25px;
+		background-color: #ff8f40;
+		color: #ffffff;
+		font-size: 35px;
+		height: 240px;
+		width: 310px;
+		float: left;
+	}
+	.variance-total
+	{
+		padding-top: 25px;
+		margin-right: 50px; 
+		background-color: #ff8f40;
+		color: #ffffff;
+		font-size: 35px;
+		height: 240px;
+		width: 310px;
+		float: left;
+	}
+	.table-info
+	{
+		margin-right: 50px;
+		margin-left: 50px;
+	}
+	</style>
+</head>
+<body>
+	<div class="entire-page">
+		<div class="col-xs-12 report-header">
+			<a href="#" style="color:#ffffff;"><div class="col-xs-4 glyphicon glyphicon-arrow-left left-arrow" style="font-size:80px"></div></a>
+			<div class="col-xs-4 text-center" style="font-size:60px">REPORTS</div>
+			<a href="#" style="color:#ffffff"><div class="col-xs-4 glyphicon glyphicon-cog text-right cog-symbol" style="font-size:80px"></div></a>
+		</div>
+		<div class="clearfix"></div>
+		<p class="report-title text-uppercase" style="font-size:60px">Schedule Adherance</p>	
+	  	<div class="dropdown">	
+	  		<div class="dropdown col-xs-4 dd-list1">
+	  			Associates<span class="caret"></span>
+	  			<ul class="dropdown-menu associates">
+	  				<li><a href="#">1</a></li>
+	  				<li><a href="#">2</a></li>
+	  				<li><a href="#">3</a></li>
+	  				<li><a href="#">4</a></li>	
+	  			</ul>
+	  		</div>
+	  		<div class="dropdown col-xs-4 dd-list2">
+	  			All Depts.<span class="caret"></span>
+	  			<ul class="dropdown-menu departments">
+	  				<li><a href="#">1</a></li>
+	  				<li><a href="#">2</a></li>
+	  				<li><a href="#">3</a></li>
+	  				<li><a href="#">4</a></li>	
+	  			</ul>
+	  		</div>
+	  		<div class="dropdown col-xs-4 dd-list3">
+	  			Week to Date<span class="caret"></span>
+	  			<ul class="dropdown-menu departments">
+	  				<li><a href="#">1</a></li>
+	  				<li><a href="#">2</a></li>
+	  				<li><a href="#">3</a></li>
+	  				<li><a href="#">4</a></li>	
+	  			</ul>
+	  		</div>
+	  	</div>
+	  	<div class="display-totals">
+	  		<div class="col-xs-4 text-center scheduled-total">
+	  			Scheduled<br><span class="text-center schedule-total-value" style="font-size:80px">350.00</span>
+	  		</div>
+	  		<div class="col-xs-4 text-center actual-total">
+	  			Actual<br><span class="text-center actual-total-value" style="font-size:80px">357.50</span>
+	  		</div>
+	  		<div class="col-xs-4 text-center variance-total">
+	  			Variance<br><span class="variance-total-value" style="font-size:80px">7.50</span>
+	  		</div>
+	  	</div>
+		<div class="table-info">  	
+		  	<table class="table">
+		  		<thead class="text-uppercase table-head" style="font-size:35px; color:#4d4d4d">
+		  			<tr>
+		  				<th>Associate</th>
+		  				<th>Scheduled</th>
+		  				<th>Approved</th>
+		  				<th>Unexcused</th>
+		  			</tr>
+		  		</thead>
+		  		<tbody>
+		  			<tr>
+		  				<td class="associate-name" style="font-size:35px; color: #4d4d4d">John Schnider<br>
+		  				<span class="associate-dept" style="font-size:30px; color: #a6a6a6">21- Customer Service</span></td>
+		  				<td class="text-center associate-scheduled-value" style="font-size:35px; color: #4d4d4d">30.00</td>
+		  				<td class="text-center associate-approved-value" style="font-size:35px; color: #96cc29; font-weight:bold"></td>
+		  				<td class="text-center associate-unexcused-value" style="font-size:35px; color: #cc5252; font-weight:bold">3.00</td>
+		  			</tr>
+		  			<tr>
+		  				<td class="associate-name" style="font-size:35px; color: #4d4d4d">Jill Jackson<br>
+		  				<span class="associate-dept" style="font-size:30px; color: #a6a6a6">42- Register</span></td>
+		  				<td class="text-center associate-scheduled-value" style="font-size:35px; color: #4d4d4d">32.00</td>
+		  				<td class="text-center associate-approved-value" style="font-size:35px; color: #96cc29; font-weight:bold">1.25</td>
+		  				<td class="text-center associate-unexcused-value" style="font-size:35px; color: #cc5252; font-weight:bold"></td>
+		  			</tr>
+		  			<tr>
+		  				<td class="associate-name" style="font-size:35px; color: #4d4d4d">Janice Watson<br>
+		  				<span class="associate-dept" style="font-size:30px; color: #a6a6a6">21- Customer Service</span></td>
+		  				<td class="text-center associate-scheduled-value" style="font-size:35px; color: #4d4d4d">24.00</td>
+		  				<td class="text-center associate-approved-value" style="font-size:35px; color: #96cc29; font-weight:bold">1.00</td>
+		  				<td class="text-center associate-unexcused-value" style="font-size:35px; color: #cc5252; font-weight:bold"></td>
+		  			</tr>
+		  			<tr>
+		  				<td class="associate-name" style="font-size:35px; color: #4d4d4d">Josh Simpson<br>
+		  				<span class="associate-dept" style="font-size:30px; color: #a6a6a6">24-Lumber</span></td>
+		  				<td class="text-center associate-scheduled-value" style="font-size:35px; color: #4d4d4d">30.00</td>
+		  				<td class="text-center associate-approved-value" style="font-size:35px; color: #96cc29; font-weight:bold"></td>
+		  				<td class="text-center associate-unexcused-value" style="font-size:35px; color: #cc5252; font-weight:bold">0.75</td>
+		  			</tr>
+		  		</tbody>
+		  	</table>
+		</div>
+	</div>
+</body>
+</html>

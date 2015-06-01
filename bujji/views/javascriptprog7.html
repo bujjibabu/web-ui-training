@@ -1,0 +1,60 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Bootstrap</title>
+		<link rel="icon" href="../images/html_5_logo_128.png" sizes="16x16" type="image/png"> 
+		<link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
+	</head>
+	<body>
+		<div class="container">
+			<div class="text-center">LogIn form</div>
+				<div class="col-xs-12 col-sm-offset-4 col-sm-4">
+					<button onclick="fnClick()" class="btn btn-success">click Here</button>
+				</div>
+		</div>
+		<script type="text/javascript">
+			var name="bujji";
+			var firstname="balaga";
+			var lastname ="babu";
+			var name="bujji", firstname="balaga", lastname="babu";
+			var myName; //undefined
+			console.log(myName); //o/p undefined
+			var mylastName = null;
+			console.log(mylastName); //null
+			if(myName==mylastName){
+				//alert('first if both are equel');
+			}else{
+				//alert('first else both are not equel');
+			}
+
+			if(myName===mylastName){
+				//alert('second if both are equel');
+			}else{
+				//alert('second else both are not equel');
+			}
+			var x = 5;
+			var y = "5";
+			if(x===y){
+				//alert("equel");
+			}else{
+				//alert('not equel');
+			}
+			var x1 = 10;
+			z = 10;
+
+			console.log("z value"+ z);
+
+			var value;
+			function fnClick(){
+				value = x1+z;
+				console.log('inside function' + value);
+			};
+			console.log("outside function" + x1);
+
+			function fnClick2(){
+				console.log('outside function' + value);
+			}
+
+		</script>
+	</body>
+</html>

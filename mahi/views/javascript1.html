@@ -18,10 +18,11 @@
 				</div>
 				<div class="form-group">
 					<label>Password</label>
-					<input type="password" class="form-control" placeholder="Enter password" id="pwrd" class="password">
+					<input type="password" class="form-control password1" placeholder="Enter password" id="pwrd" >
 				</div>
 				
-				<div class="text-center form-group"><button class="btn btn-default" onclick="fnSignIn()">Sign In<!--<a href="file:///C:/Users/mahesh/Desktop/practice/views/javascript2.html" onclick="fnClick2()"></a>--></button></div>
+				<div class="text-center form-group"><button class="btn btn-default" onclick="fnSignIn()">Sign In</button></div>
+				<a href="javascript2.html" onclick="fnClick2()">clickhere</a>
 				<div id="text"></div>
 			<!--</form>-->
 		</div>
@@ -29,13 +30,21 @@
 
 			//var x = document.getElementById("user").value;
 			//var y = document.getElementsByClassName("password").value;
+			var x=null;
 			function fnSignIn(){
-				var x = document.getElementById("user").value;
-				var y = document.getElementById("pwrd").value;
-				//var y = document.getElementsByClassName("password").value;
+				x = document.getElementById("user").value;
+				//var y = document.getElementById("pwrd").value;
+				//debugger;
+				var z = document.getElementsByClassName("password1")[0].value;
 				console.log("username is " + x);
-				console.log("password is " + y);
-				document.getElementById("text").innerHTML = "user successfully logged in";
+				console.log("password is " + z);
+				if(x&&z){
+					document.getElementById("text").innerHTML = "<b class='text-success'>user successfully logged in</b>";
+				}else{
+					alert('please  fill the details');
+				}
+
+
 				//console.log(y);
 			//alert("USERNAME IS "+x+" and PASSWORD is "+y );
 		}

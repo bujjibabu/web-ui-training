@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+	<head>
+		<title>JavaScript1</title>
+		<link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
+	</head>
+	<body>
+		<div class="col-xs-12 col-sm-6 col-sm-offset-3">
+			<div>JavaScript and BootStrap practice. JSON (JavaScript Object Notation) is a lightweight data-interchange format. It is easy for humans to read and write. It is easy for machines to parse and generate.</div>
+			<div>JSON is a text format that is completely language independent but uses conventions that are familiar to programmers of the C-family of languages, including C, C++, C#, Java, JavaScript, Perl, Python, and many others. These properties make JSON an ideal data-interchange language.</div>
+			
+			<button onclick="fnClick()">submit</button>
+			<br><br>
+			<p id="myp1" ></p>
+			<p id="myp2" ></p>
+			<p id="myp3" ></p>
+		</div>
+		<script type="text/javascript">
+
+			var data = {name:"Mahesh", country:"India", jobrole:"Software Developer"};
+
+			function fnClick(){
+				document.getElementById("myp1").innerHTML = data.name;
+				document.getElementById("myp2").innerHTML = data.country;
+				document.getElementById("myp3").innerHTML = data.jobrole;
+			
+			}
+		</script>
+	</body>
+</html>

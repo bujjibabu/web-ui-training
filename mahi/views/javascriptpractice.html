@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+	<head>
+		<title>JavaScriptprac</title>
+		<link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
+	</head>
+	<body>
+		<form id="myform">
+			First Name: <input type="text" id="myfn"><br>
+			Last Name: <input type="text" id="myln"><br>
+			<button>submit</button><br><br>
+			<p>Click the "Try it" button to display the value of each element in the form.</p><br><br>
+
+			<button onclick="myFunction()">Try it</button>
+
+			<p id="catch"></p>
+		</form>
+
+		<script type="text/javascript">
+
+			function myFunction(){
+				debugger;
+				var x = document.getElementById("myform");
+				console.log(x);
+				document.getElementById("catch").innerHTML = x[0].value;
+			}
+
+		</script>
+	</body>
+</html>

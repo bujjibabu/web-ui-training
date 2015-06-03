@@ -1,0 +1,120 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Bootstrap</title>
+		<link rel="icon" href="../images/html_5_logo_128.png" sizes="16x16" type="image/png"> 
+		<link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
+	</head>
+	<body>
+		<div class="container">
+			<div class="text-center">LogIn form</div>
+				<div class="col-xs-12 col-sm-offset-2 col-sm-8">
+<!-- 					<button onclick="fnClick1()" class="btn btn-danger">onclick()</button>
+					<button onmouseenter="fnClick2()" class="btn btn-success">onmouseenter()</button>
+					<button onmouseout="fnClick3()" class="btn btn-primary">onmouseout()</button>
+					<button onkeydown="fnClick4()" class="btn btn-info">onkeydoen()</button> -->
+				</div>
+		</div>
+		<script type="text/javascript">
+			
+			var names = 'Apple, Banana, Kiwi';
+			
+			var substrings = names.substring(7,13);
+			console.log("substrings :"+substrings);
+
+			var substr = names.substr(7,9); 
+			console.log(" substr : "+ substr);
+
+			var mystring = "This is innominds and innominds in U.S";
+			var replacestr = mystring.replace("innominds","TCS"); 
+			console.log(" replacestr : "+ replacestr);
+
+			var mystring1 = "This is Innominds and Innominds in U.S";
+			var replacestr1 = mystring1.replace("innominds","TCS"); 
+			console.log(" replacestr1 : "+ replacestr1);
+
+			var mystring2 = "This is innominds and Innominds in U.S";
+			var replacestr2 = mystring2.replace(/innominds/,"TCS"); 
+			console.log(" replacestr2 : "+ replacestr2);
+
+			var mystring3 = "This is Innominds and Innominds in U.S";
+			var replacestr3 = mystring3.replace(/innominds/i,"TCS"); 
+			console.log(" replacestr3 : "+ replacestr3);
+
+			var mystring4 = "This is innominds and innominds in U.S";
+			var replacestr4 = mystring4.replace(/innominds/g,"TCS"); 
+			console.log(" replacestr4 : "+ replacestr4);
+
+
+			var mystring5 = "This is Innominds and innominds in U.S";
+			var replacestr5 = mystring5.replace(/innominds/ig,"TCS"); 
+			console.log(" replacestr5 : "+ replacestr4);
+
+			var myUppercaseString = mystring5.toUpperCase();
+			console.log(" myUppercaseString :"+myUppercaseString);
+
+			var name1 = "bujji";
+			var name2 = "babu";
+			var concatStr = name1.concat(" ",name2);
+			console.log("concta string : " + name1 + " " + name2);
+		 	console.log(" concatStr : "+concatStr);
+
+		 	var splitstring = name1.split('');
+		 	console.log(" splitstring :"+ splitstring);
+
+		 	var x = 9.3456;
+		 	var tofix = x.toFixed(0);
+
+		 	//Numbers
+		 	var y = "10";
+		 	var cnum = parseInt(y);
+		 	var cnum1 = Number(y);
+		 	console.log("Number : " + cnum1)
+
+		 	var z = 10.345;
+		 	var n = "10.345";
+		 	console.log(Number(n));
+		 	console.log(parseInt(n));
+		 	console.log(parseInt(z));
+		 	var random = Math.random()
+		 	console.log("random : "+ random);
+
+			var min = Math.min(10,3,5,2,0 -18);				//mystring.replace()
+			var max = Math.max(10,3,5,2,0 -18);				//mystring.replace()
+		 	console.log("min num : "+ min);
+		 	console.log("max num : "+ max);
+
+		 	console.log("Math.round(4.6) : "+ Math.round(4.6));
+
+		 	console.log("Math.floor(4.6) : "+ Math.floor(4.6));
+		 	console.log("Math.ceil(4.3) : "+ Math.ceil(4.3));
+
+		 	var myArray = ["bujji","Aarya","murali","phani"];
+
+		 	var sortingord = myArray.sort();
+		 	console.log(sortingord);
+		 	//myArray[1] = "rani";
+		 	
+		 	console.log("befor: "+ myArray);
+		 	myArray.push('raja');
+		 	myArray.unshift('mahesh');
+
+		 	//myArray[myArray.length] = "rani";
+		 	console.log("after : "+myArray);
+		 	//deleting
+		 	var deleteele = myArray.pop()
+		 	console.log("deleteele : "+ deleteele );
+		 	console.log("myArray : "+ myArray );
+
+		 	var delteElement = delete myArray[3];
+
+		 	console.log("after delteElement : "+ myArray );
+		 	console.log("delteElement : "+ delteElement );
+
+		 	console.log("before splice : "+ myArray );
+		 	myArray.splice(3,1)
+		 	console.log("after splice : "+ myArray );
+		 	
+		</script>
+	</body>
+</html>

@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Bootstrap</title>
+		<link rel="icon" href="../images/html_5_logo_128.png" sizes="16x16" type="image/png"> 
+		<link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
+	</head>
+	<body>
+		<div class="container">
+			<div class="text-center">LogIn form</div>
+				<!-- <div class="col-sm-4"></div> -->
+				<div class="col-xs-12 col-sm-offset-4 col-sm-4 first-form">
+					<p id="mypara">Create virtual rooms where your teams can work.And keep the work moving forward th video calling, group messaging, and the freedom to meet from anywhere</p>
+					<button onclick="fnClick()">Click Here</button>
+					<p id="username" class="username" name="username"></p>
+					<p id="mobileno"></p>
+				</div>
+		</div>
+		<script type="text/javascript">
+
+
+			//var myparagraph = ;
+			 var serverdata = {name:'bujji',mobile:9533068603};
+				document.getElementById('username').innerHTML = serverdata.name;
+				//document.getElementsByClassName('username').innerHTML = serverdata.name;
+				document.getElementById('mobileno').innerHTML = serverdata.mobile;
+				document.getElementById('mobileno').style.fontSize = '25px';
+
+			function fnClick(){
+				
+				document.getElementById('mypara').innerHTML = 'Replacedata';
+				/*$.ajax({
+				type: "GET",
+				  url: url,
+				  datatype:datatype,
+				  success: function(result){
+				    var serverdata = result;
+				  },
+				  error: function(){
+				   alert('error');
+				  }
+				});*/
+
+               var serverdata = {name:'bujji',mobile:9533068603};
+				document.getElementById('username').innerHTML = serverdata.name;
+				document.getElementById('mobileno').innerHTML = serverdata.mobile;
+				//document.getElementById('mypara').innerHTML;
+				//console.log(data);
+			}
+		</script>
+	</body>
+</html>

@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Bootstrap</title>
+		<link rel="icon" href="../images/html_5_logo_128.png" sizes="16x16" type="image/png"> 
+		<link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
+	</head>
+	<body>
+		<div class="container">
+			<div class="text-center">LogIn form</div>
+				<div class="col-xs-12 col-sm-offset-4 col-sm-4">
+					<button onclick="fnClick()" class="btn btn-danger">function1()</button>
+					<button onclick="fnClick2()" class="btn btn-success">function2()</button>
+				</div>
+		</div>
+		<script type="text/javascript">
+			var x1= 10;
+			var z=20;
+			var value=200;
+			function fnClick(){
+				var value = 400;
+				console.log('inside function: ' + value);
+				//value= value+10;
+				//console.log()
+			};
+
+			function fnClick2(){
+
+				console.log('outside function: ' + value);
+			}
+		</script>
+	</body>
+</html>

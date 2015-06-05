@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Bootstrap</title>
+		<link rel="icon" href="../images/html_5_logo_128.png" sizes="16x16" type="image/png"> 
+		<link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
+	</head>
+	<body>
+		<div class="container">
+			<div class="text-center">LogIn form</div>
+				<div class="col-xs-12 col-sm-offset-2 col-sm-8">
+					<button onclick="fnClick1()" class="btn btn-danger">onclick()</button>
+					<button onmouseenter="fnClick2()" class="btn btn-success">onmouseenter()</button>
+					<button onmouseout="fnClick3()" class="btn btn-primary">onmouseout()</button>
+					<button onkeydown="fnClick4()" class="btn btn-info">onkeydoen()</button>
+				</div>
+		</div>
+		<script type="text/javascript">
+			function fnClick1(){
+				console.log('onclick function: ');
+				//code here or logic
+			};
+			function fnClick2(){
+				console.log('on mouseenter function: ');
+				//code here or logic
+			};
+			function fnClick3(){
+				console.log('onmouseout function: ');
+				//code here or logic
+			};
+			function fnClick4(){
+				console.log('onkeydown ');
+			};
+		</script>
+	</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Express | Shop Men's and Women's Clothing</title>
+	<link rel="icon" href="images/lion.png" type="image/png">
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="../css/shopping-site.css">
+</head>
+<body>
+	<div class="header-bar">	
+		<div class="signIn-row">Free Shipping On all Orders Over $75. 
+				<a href="https://www.express.com/account/signin.jsp" class="btn-signIn"><b>Sign In</b></a>
+		</div>
+		<img class="express-logo" src="images/express.jpg">
+		<div class="mynavmenu">
+			<ul class="mymenu">
+				<li class="mymenu-items"><a href="#">Women</a></li>
+				<li class="mymenu-items"><a href="#">Men</a></li>	
+				<li class="mymenu-items"><a href="#">Sale</a></li>
+				<li class="mymenu-items"><a href="#">Shops</a></li>
+				<li class="mymenu-items"><a href="#">LookBooks</a></li>
+				<li class="mymenu-items"><a href="#">Blog</a></li>
+
+				<span onmouseenter="fnsearch()" class="text-right search-area shopping-bag" style="margin-right:25px; padding-left:21em">Search
+				<span class="glyphicon glyphicon-search">&nbsp</span>
+			</span>
+			<span onmouseenter="fnmybag()" class="text-right my-bag" style="margin-right:45px">My Bag
+				<span class="glyphicon glyphicon-shopping-cart">&nbsp</span>
+			</span>	
+			</ul>		
+		</div>
+		
+	</div>
+	<div class="container-fluid">
+		<div class="col-xs-12 col-md-6 background-model-images" style="margin-top:10px">
+			<a href="http://www.express.com/clothing/women/shorts/cat/cat320019?ICID=15683">
+			<img src="images/womens-shorts-desktop.jpg" style=" height:500px; width:655px"></a>
+		</div>
+		<div class="col-xs-12 col-md-6 background-model-images" style="margin-top:10px">
+			<a href="http://www.express.com/clothing/men/shorts/cat/cat1490010?ICID=15684">
+			<img src="images/mens-shorts-desktop.jpg" style=" height:500px; width:655px"></a>
+		</div>
+		<div id="content" class="content-links">
+			<span id="womens-shopping" style="transition: background-color 2s"><a href="http://www.express.com/clothing/women/shorts/cat/cat320019?ICID=15683" 
+			style="position: absolute;
+   				   padding: 10px 60px;
+    			   top: 50%;
+    			   left: 42%;">Shop Womens</a>
+    		</span>
+    		<span id="mens-shopping"><a href="http://www.express.com/clothing/men/shorts/cat/cat1490010?ICID=15684"
+    		style="position: absolute;
+    			   padding: 10px 72px;
+    			   top: 60%;
+    			   left: 42%;">Shop mens</a>
+    		</span>		
+		</div>
+	</div>
+	<br>
+	<hr class="divider-line" style="margin-left:160px; margin-right:160px; border:1px solid #666666">
+	<span class=" text-center text-uppercase welcome-message"><script src="js/shopping-site.js" type="text/javascript"></script></span>
+	<hr class="divider-line" style="margin-left:160px; margin-right:160px; border:1px solid #666666">
+</body>
+</html>

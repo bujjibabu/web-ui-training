@@ -1,0 +1,163 @@
+<!doctype html>
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
+		<style type="text/css">
+			.total-page{
+				height: 1920;
+				width: 1080px;
+			}
+			.title-head{
+				height: 216px;
+				width: 1080px;
+				background: rgb(246, 131, 38);
+				color: #ffffff;
+				padding-top: 50px;
+				margin-bottom: 100px;
+			}
+			.bb-setting-icon1{
+				font-size: 80px;
+			}
+			.title-head-text{
+				text-transform: uppercase;
+				//font: oswald regular 60pt;
+				font-size: 80px;
+			}
+			.bb-setting-icon2{
+				font-size: 80px;
+			}
+			#sch-adh-para{
+				text-transform: uppercase;
+				font-size: xx-large;
+				margin-bottom: 100px;
+				
+			}
+			.dropdowns{
+				//background: red;
+				margin-bottom: 200px;
+			}
+			.sch-div{
+				//background: red;
+				background: #ff8f40;
+				height: 240px;
+				width: 310px;
+				margin-right: 15px;
+				padding-top: 64px;
+			}
+			.actual-div{
+				//background: green;
+				background: #ff8f40;
+				height: 240px;
+				width: 310px;
+				margin-right: 15px;
+				padding-top: 64px;
+			}
+			.variance-div{
+				background: #ff8f40;
+				height: 240px;
+				width: 310px;
+				padding-top: 64px;
+			}
+			.p1{
+				color: #ffffff;
+				font-size: 30px;
+				opacity: 0.6;
+			}
+			.p2{
+				color: #ffffff;
+				font-size: 60px;
+			}
+			.p3{
+				color: #ffffff;
+				font-size: 30px;
+				opacity: 0.6;
+			}
+			.p4{
+				color: #ffffff;
+				font-size: 60px;
+			}
+			.p5{
+				color: #ffffff;
+				font-size: 30px;
+				opacity: 0.6;
+			}
+			.p6{
+				color: #ffffff;
+				font-size: 60px;
+			}
+			.dept-table{
+				margin-right: 250px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="total-page">
+			<div class="title-head col-xs-12">
+				<span class="icon1 col-xs-4"><i class="glyphicon glyphicon-arrow-left bb-setting-icon1"></i></span>
+				<label class="col-xs-4 text-center title-head-text">Reports</label>
+				<span class="icon2 col-xs-4 text-right"><i class="glyphicon glyphicon-cog bb-setting-icon2"></i></span>
+			</div>
+			<p class="col-xs-6" id="sch-adh-para">schedule adherance</p>
+			<div class="clearfix"></div>
+			<div class="dropdowns">
+				<div class="col-xs-3"><select class="text-center" style="width:310px; height:120px;"><option>Associates</option></select></div>
+				<div class="col-xs-9"><select class="text-center" style="width:640px; height:120px;" ><option>Week to Date</option></select></div>
+			</div>
+			<div class="sav col-xs-12 text-center">
+				<div class="col-xs-4 sch-div"><p class="p1 text-uppercase">scheduled</p><p class="p2">350.00</p></div>
+				<div class="col-xs-4 actual-div"><p class="p3 text-uppercase">actual</p><p class="p4">357.50</p></div>
+				<div class="col-xs-4 variance-div"><p class="p5 text-uppercase">variance</p><p class="p6">7.50</p></div>
+			</div>
+			<div class="dept-table col-xs-12"> 
+				<table class="table col-xs-12 table-responsive">
+					<thead>
+						<tr>
+							<th>DEPARTMENT</th>
+							<th>ASSOCIATES</th>
+							<th>SCHEDULED</th>
+							<th>VARIANCE</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>21 - Customer Service</td>
+							<td>3</td>
+							<td>93.00</td>
+							<td>3.5</td>
+						</tr>
+						<tr>
+							<td>24 - Lumber</td>
+							<td>2</td>
+							<td>58.00</td>
+							<td>1.25</td>
+						</tr>
+						<tr>
+							<td>25 - Paint</td>
+							<td>2</td>
+							<td>64.00</td>
+							<td>1.00</td>
+						</tr>
+						<tr>
+							<td>35 - Plumbing</td>
+							<td>1</td>
+							<td>34.00</td>
+							<td>.75</td>
+						</tr>
+						<tr>
+							<td>42 - Register</td>
+							<td>4</td>
+							<td>128.00</td>
+							<td>.50</td>
+						</tr>
+						<tr>
+							<td>78 - Stock</td>
+							<td>3</td>
+							<td>95.00</td>
+							<td>.25</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</body>
+</html>	

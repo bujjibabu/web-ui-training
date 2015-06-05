@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+	<head>
+		<title>JS</title>
+	</head>
+	<body>
+		<div>hello world</div>
+		<div id="test"></div>
+		<script type="text/javascript">
+			var currentDate = new Date();
+			var greetings = 'Good' + (currentDate.getHours()>17 ? 'evening' : 'day');
+			//console.log(greetings);
+			if(currentDate.getHours()>17){
+				document.getElementById('test').innerHTML = 'Good Evening';
+				console.log('from if condition : good Evening');
+			}else{
+				console.log('from else:good Day');
+			}
+			for(var i=1; i<111; i++){
+				console.log(i);
+			}
+			//var myObject = {};
+			//var myObject = new Object();
+			var myObject =  {name:'bujjibabu',mobile:9533068603,pin:532459,addess:'Hyd'};
+			var myObject1 =  {'name':'bujjibabu','mobile':9533068603,'pin':532459,'addess':'Hyd'};
+			console.log(myObject.name);
+			console.log(myObject.addess);
+			var myArray = [];
+			//var myArray = new Array();
+			var myArray1 = [myObject,myObject1];
+			var myArray2 = [{name:'bujjibabu',mobile:9533068603,pin:532459,addess:'Hyd'},
+			{'name':'bujjibabu','mobile':9533068603,'pin':532459,'addess':'Hyd'}];
+			var myArray3 = ['bujji','ravi','raj'];
+			var myArray4 = [5,'ravi','raj',5.4];
+			console.log(myArray4[3]);
+			console.log(myArray2[0].mobile);
+			myOwnobj = {name:'bujji',state:[{statename:95,code:'hyd',status:true}]}
+			// myOwnobj.address.houseno
+		</script>
+	</body>
+</html>

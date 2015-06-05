@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Bootstrap</title>
+		<link rel="icon" href="../images/html_5_logo_128.png" sizes="16x16" type="image/png"> 
+		<link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
+	</head>
+	<body>
+		<div class="container">
+			<div class="text-center">LogIn form</div>
+				<!-- <div class="col-sm-4"></div> -->
+				<div class="col-xs-12 col-sm-offset-4 col-sm-4 first-form">
+					<div class="form-group">
+						<label>UserName: </label>
+						<input type="text" class="form-control" id="username" placeholder="Username">
+					</div>
+					<div class="form-group">
+						<label>Password: </label>
+						<input type="password" class="form-control" placeholder="Username" id="password">
+					</div>
+					<div class="text-center form-group"><button class="btn btn-default" onclick="fnSignIn()">Sign In</button></div>
+				</div>
+		</div>
+		<script type="text/javascript">
+			function fnSignIn(){
+				var usernameTxt = document.getElementById('username').value;
+				var passwordTxt = document.getElementById('password').value;
+				//console.log('username :' + usernameTxt);
+				//console.log('password :' + passwordTxt);
+				var userObject = {}
+				//var userObject = {username:usernameTxt,password:passwordTxt};
+				var userObject = {'username':usernameTxt,'password':passwordTxt};
+			   //userObject.username=usernameTxt;
+			  // userObject.password=passwordTxt;
+			   userObject['username']=passwordTxt;
+			   userObject['password']=passwordTxt;
+			   debugger;
+				console.log('userObject :' + userObject);
+				//ajax call
+				$.ajax({
+				  type: "Get",
+				  url: "https://192.68.23/projectname/userdetailstable",
+				  datatype:'application/json'
+				}).done(function( response ) {
+					var myresult = response;
+				    alert( "Data Saved: " + response );
+				  }).fail(function(msg){
+				    alert( "error" );
+				});
+			}
+		</script>
+	</body>
+</html>

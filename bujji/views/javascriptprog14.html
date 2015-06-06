@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Bootstrap</title>
+		<link rel="icon" href="../images/html_5_logo_128.png" sizes="16x16" type="image/png"> 
+		<link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
+	</head>
+	<body>
+		<div class="container">
+			<div class="text-center">LogIn form</div>
+				<div class="col-xs-12 col-sm-offset-2 col-sm-8">
+					<div class="form-group">
+						<p id="para">This is bujjibabu from hyd working as web developer</p>
+						<label>Enter Any letter or word</label>
+						<input type="text" id="myinput" class="form-control" placeholde="please enter the word">
+					</div>
+					<button class="btn btn-succes" onclick="fnCheckWord()">Test</button>
+				</div>
+		</div>
+		<script type="text/javascript">
+			
+		 	var custString = document.getElementById('para').innerHTML;
+		 	 function fnCheckWord(){
+		 	 	var myinputValue = document.getElementById('myinput').value;
+		 		 var findindex = custString.indexOf(myinputValue);
+		 		  if(findindex===-1){
+			 	 	alert(false);
+			 	 }else{
+			 	 	alert(true);
+			 	 }
+		 	 }
+		 	
+
+
+		 	//hyd //true;
+		 	//vizag// false
+
+
+		 	
+		</script>
+	</body>
+</html>

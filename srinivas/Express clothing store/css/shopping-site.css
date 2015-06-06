@@ -49,6 +49,12 @@ a.btn-signIn:hover
 	padding-left: 25px;
 	border-right:1px dotted gray;
 }
+.mymenu-items:last-child,
+.btn-signIn{
+	font-size: 25px !important;
+	border-right:0px !important;
+	color:red;
+}
 a:link, 
 a:visited
 {

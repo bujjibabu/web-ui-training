@@ -1,0 +1,52 @@
+body
+{
+	/*background-color: #000000;*/
+	background-image: url("../images/blue-blur-bg.jpg");	
+    background-size: 1448px 738px;
+    background-repeat: repeat-y;
+    background-position: fixed;
+    color: ghostwhite;
+}
+.header-text
+{
+	  color: ghostwhite;
+	  font-weight: bold;
+}
+.page-footer
+{
+	margin-bottom: 20px;
+}
+.footer-text
+{
+	text-align: center;
+	color: ghostwhite;
+}
+.form-data
+{
+	border: 10px solid #B8DBFF; 
+	border-radius: 7%;
+	padding: 30px 14px 30px 14px;
+	background-color: #17364A; 
+}
+.first-name
+{
+	width: 53%;
+	margin-right: 5px;
+	margin-bottom: 5px;
+}
+.middle-name
+{
+	width: 46%;
+	margin-bottom: 5px; 
+}
+.label-text
+{
+	color: ghostwhite;
+}
+.table-heading
+{
+	font-weight: bold;
+	margin-top: 25px;
+	margin-bottom: 25px;
+	background-color: rgb(50, 82, 95);
+}

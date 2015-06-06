@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Dynamic Form Data | Example</title>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="css/dynamic-form-data.css">
+</head>
+<body>
+	<div class="container">	
+		<header class="page-header">
+			<h1 class="text-center header-text">SIGN UP - Free Windows 10 Upgrade !!</h1>
+		</header>
+		<div class="col-sm-6 col-sm-offset-3 form-data">
+			<div role="form">
+				<div class="form-group">
+					<div class="name-details">
+						<div><label class="label-text">Full Name :</label></div>
+						<input type="text" class="col-sm-6 text-center form-control first-name" id="fname" placeholder="First Name" required></input>
+						<input type="text" class="col-sm-6 text-center form-control middle-name" placeholder="Middle Name" required></input>
+						<input type="text" class="text-center form-control last-name" id="lname" placeholder="Last Name" required></input>
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="label-text">Contact :</label>
+					<input type="value" class="text-center form-control contact-number" id="mycontact" placeholder="Enter 10-digit number" required></input>
+				</div>
+				<div class="form-group">
+					<label class="label-text">Email :</label>
+					<input type="email" class="text-center form-control" id="myemail" placeholder="Enter your email" required></input>
+				</div>
+				<div class="form-group">
+					<label class="label-text">City :</label>
+					<input type="text" class="text-center form-control city-name" id="mycity" placeholder="Enter your city" required></input>
+				</div>
+				<div class="form-group">
+					<label class="label-text">Zipcode :</label>
+					<input type="value" class="text-center form-control" id="myzip" placeholder="Enter your zipcode" required></input>
+				</div>
+				<center><button onclick="fnaddrow()" type="button" class="btn btn-success">VERIFY and ADD data to Dynamic Data Table</button></center>
+			</div>
+		</div>
+		<div class="clearfix"></div>
+		<h3 class="text-center text-uppercase table-heading">Dynamic-Data table</h3>
+	    <table class="table" id="myDynamicTable">
+	    	<thead>
+	      	<tr>
+	        	<th>Firstname</th>
+	        	<th>Lastname</th>
+	        	<th>Contact Number</th>
+	        	<th>Email</th>
+	        	<th>city</th>
+	        	<th>Zipcode</th>
+	      	</tr>
+	    	</thead>
+	    	<tbody>
+	      	<tr>
+	        	<td>John</td>
+		        <td>Doe</td>
+	        	<td>123123</td>
+	        	<td>john@example.com</td>
+	        	<td>Texas</td>
+	        	<td>12345</td>
+	      	</tr>
+	    	</tbody>
+	  	</table>
+		<div class="clearfix"></div>
+		<footer class="page-footer">
+			<div class="footer-text">
+				<hr>&copy copyright 2015. All rights reserved. 
+			</div>
+		</footer>
+	</div>	
+  	<script src="js/dynamic-form-data.js" type="text/javascript"></script>
+</body>
+</html>

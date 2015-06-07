@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Bootstrap</title>
+		<link rel="icon" href="../images/html_5_logo_128.png" sizes="16x16" type="image/png"> 
+		<link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
+	</head>
+	<body>
+		<div class="container">
+			<div class="text-center">JQuery</div>
+				<div class="col-xs-12 col-sm-offset-2 col-sm-8">
+						<p class="bb-para1">This is jquery welcome program</p>
+						<p class="bb-para2">This is jquery welcome program</p>
+						<p class="bb-para3">Underscore consists of a little more than 100 functions, which fall under four main categories depending on the datatypes which they manipulate: functions for manipulating arrays, functions for manipulating objects, functions for manipulating both arrays and objects (the name of the category is "Collections") and functions for manipulating other functions. There are also two utility categories : "Utility" and "Chaining".</p>
+						<h4 class="my-head">This is jquery welcome program</h4>
+						<button class="Style-btn btn btn-danger">Style Apply</button>
+						<button class="h4-btn btn btn-warning">h4 style</button>
+				</div>
+		</div>
+		<script type="text/javascript" src="../js/jquery-2.1.4.js"></script>
+		<script type="text/javascript">
+		$(document).ready(function(){ 
+
+			$('.Style-btn').click(function(){
+				$('p').css('color','red');
+			});
+
+    		//{} object
+			$('.h4-btn').click(function(){
+				$('.my-head').css({'color':'red','background':'blue'});
+			});
+
+			$('p:first').css('color','red');
+
+			//$('*').css('color','blue');
+
+		});
+		</script>
+	</body>
+</html>

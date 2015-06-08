@@ -1,0 +1,98 @@
+body
+{
+	background-image: url("../images/arriere-bg.jpg");	
+    background-size: 1448px 738px;
+    background-repeat: repeat-y;
+    background-position: fixed;
+    color: rgb(247, 8, 8);
+}
+.header-text
+{
+	  color: rgb(247, 8, 8);
+	  font-weight: bold;
+}
+.page-footer
+{
+	margin-bottom: 20px;
+}
+.footer-text
+{
+	text-align: center;
+	color: rgb(247, 8, 8);
+}
+.form-control
+{
+	box-shadow: inset 0 1px 1px rgba(124, 8, 8, 1);
+}
+.form-data
+{
+	border-radius: 7%;
+	padding: 30px 14px 30px 14px;
+	background: none; 
+	box-shadow: 0 0 0.5em 0.5em rgb(247, 8, 8);
+}
+.transparent-glyph
+{
+	background-color: none;
+	color: rgb(247, 8, 8);
+}
+.input-group-addon
+{
+	background-color: #000000;
+}
+
+.btn {
+	-webkit-border-radius: 60;
+	-moz-border-radius: 60;
+	border-radius: 60px;
+	text-shadow: 0px 1px 19px rgb(247, 8, 8);
+	-webkit-box-shadow: 0px 0px 25px rgb(247, 8, 8);
+	-moz-box-shadow: 0px 0px 25px rgb(247, 8, 8);
+	box-shadow: 0px 0px 25px rgb(247, 8, 8);
+	font-family: Georgia;
+	color: rgb(247, 8, 8);
+	font-size: 15px;
+	padding: 8px 20px 8px 20px;
+	text-decoration: none;
+	background:none;
+}
+
+.btn:hover {
+	background: #000000;
+	color: rgb(247, 8, 8);
+}
+input.transparent-input { 
+    border:none !important
+}
+
+.transparent-input {
+   background-color: rgba(0, 0, 0, 0);
+   color: rgb(247, 8, 8);
+   border:none;
+}
+.first-name
+{
+	width: 53%;
+	margin-right: 5px;
+	margin-bottom: 5px;
+}
+.middle-name
+{
+	width: 46%;
+	margin-bottom: 5px; 
+}
+.label-text
+{
+	color: rgb(247, 8, 8);
+}
+table
+{
+	border: 1px solid #EA1515;
+}
+.table-heading
+{
+	font-weight: bold;
+	margin-top: 25px;
+	margin-bottom: 25px;
+	background-color: none;
+}

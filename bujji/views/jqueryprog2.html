@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Bootstrap</title>
+		<link rel="icon" href="../images/html_5_logo_128.png" sizes="16x16" type="image/png"> 
+		<link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
+	</head>
+	<body>
+		<div class="container">
+			<div class="text-center">JQuery</div>
+				<div class="col-xs-12 col-sm-offset-2 col-sm-8">
+						<p class="wc">This is jquery welcome program</p>
+						<p class="bb-para">Underscore consists of a little more than 100 functions, which fall under four main categories depending on the datatypes which they manipulate: functions for manipulating arrays, functions for manipulating objects, functions for manipulating both arrays and objects (the name of the category is "Collections") and functions for manipulating other functions. There are also two utility categories : "Utility" and "Chaining".</p>
+						<button class="myhide-btn btn btn-danger">Hide Method</button>
+						<button class="myshow-btn btn btn-success">Show Method</button>
+						<button class="mytoggle-btn btn btn-warning">Toggle Method</button>
+				</div>
+		</div>
+		<script type="text/javascript" src="../js/jquery-2.1.4.js"></script>
+		<script type="text/javascript">
+		$(document).ready(function(){ 
+			//hide the paragraph
+			$('.myhide-btn').click(function(){
+				$('.bb-para').hide();
+			});
+
+			//show the paragraph
+			$('.myshow-btn').click(function(){
+				$('.bb-para').show();
+			});
+
+			//toggle the paragraph
+			$('.mytoggle-btn').click(function(){
+				$('.bb-para').toggle();
+			});
+
+		});
+		</script>
+	</body>
+</html>

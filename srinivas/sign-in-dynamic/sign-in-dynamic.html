@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Dynamic SignIn Form | Example</title>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="css/sign-in-dynamic.css">
+</head>
+
+<body>
+	<div class="container">	
+		<header class="page-header">
+			<h1 class="text-center header-text">SIGN - IN FORM</h1>
+		</header>
+		<div class="col-sm-6 col-sm-offset-3 form-data">
+			<form role="form registration" onsubmit="return formvalidation()" method="POST">
+				<div class="form-group">
+					<div class="name-details">
+						<div class="input-group input-group-lg">
+ 							 <span class="input-group-addon">
+    							<span class="glyphicon glyphicon-envelope transparent-glyph"></span>
+  							</span>
+  							<input id="myemail" class="form-control transparent-input" type="email" placeholder="Enter Email address" required>
+						</div>
+					</div>	
+				</div>
+				<div class="form-group">
+					<div class="input-group input-group-lg">
+  						<span class="input-group-addon">
+   							<span class="glyphicon glyphicon-lock transparent-glyph"></span>
+  						</span>
+  						<input id="mypswrd" class="form-control transparent-input" type="password" placeholder="Enter Password" required>
+					</div> 
+				</div>
+				<center><button onclick="formvalidation()" type="button" class="btn"><b>Sign In</b></button></center>
+			</form>
+		</div>
+		<div class="clearfix"></div>
+		<div class="col-sm-6 col-sm-offset-3 text-center">
+			<h3 class="text-uppercase table-heading">Sign In Information</h3>
+		    <table class="table" id="myDynamicTable">
+		    	<thead>
+		      	<tr>
+		        	<th class="text-center">E-mail</th>
+		        	<th class="text-center">Password</th>
+		      	</tr>
+		    	</thead>
+		    	<tbody>
+		      	<tr>
+		        	<td>exmple@somemail.com</td>
+			        <td>Example123</td>
+		      	</tr>
+		    	</tbody>
+		  	</table>
+		</div>  	
+		<div class="clearfix"></div>
+		<footer class="page-footer">
+			<div class="footer-text">
+				<hr>&copy copyright 2015. All rights reserved. 
+			</div>
+		</footer>
+	</div>		
+  	<script src="js/sign-in-dynamic.js" type="text/javascript"></script>
+</body>
+</html>

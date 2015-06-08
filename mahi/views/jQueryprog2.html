@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+	<head>
+		<title>jQuery2</title>
+		<link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
+
+	</head>
+	<body>
+		<div class="container">
+			<div class="col-xs-12 col-md-6 col-md-offset-3">
+				<h4>JavaScript library (jQuery) practice.</h4>
+				<p>jQuery is used for DOM manipulation.</p>
+				<p>jQuery is used for CSS manipulation.</p>
+				<p>At present we are using jQuery 2.x version</p>
+				<button class="btn btn-primary mn-button">submit</button>
+			</div>
+		</div>
+		<script type="text/javascript" src="../js/jquery-2.1.4.js"></script>
+
+			<script type="text/javascript">
+				
+				/*$(document).ready(function(){
+					$('h4').css('color','blue');
+				});*/
+				$(document).ready(function(){
+					$('p').css({'color':'red', 'font-style':'italic'});
+				});
+				
+				$(document).ready(function(){
+					$('.mn-button').click(function(){
+						
+						$('h4').css({'color':'#fff','background':'#000','text-align':'center','padding':'10px'});
+					});
+				});
+
+			</script>
+	</body>
+</html>

@@ -52,7 +52,6 @@ body
 	background-color: #000000;
 	border: 1px solid #5F0203;
 }
-
 .btn {
 	-webkit-border-radius: 60;
 	-moz-border-radius: 60;
@@ -74,8 +73,9 @@ body
 	background: rgb(247, 8, 8);
 	color: #000000;
 }
-input.transparent-input { 
-    border:none !important
+input.transparent-input
+{ 
+	border:none !important
 }
 .transparent-input {
     background-color: rgba(0, 0, 0, 0);

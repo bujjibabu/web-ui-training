@@ -39,22 +39,22 @@ function fncreaterow()
 	}
 	function ValidateEmail(myemail)  
 	{  debugger;
-		// var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;  
             var email = myemail.value;
-            var regex = /^([0-9a-zA-Z]([-_\\.]*[0-9a-zA-Z]+)*)@([0-9a-zA-Z]([-_\\.]*[0-9a-zA-Z]+)*)[\\.]([a-zA-Z]{2,9})$/;
+            var regex = /^([0-9a-zA-Z]([-_\\.]*[0-9a-zA-Z]+)*)@([0-9a-zA-Z]([-_\\.]*[0-9a-zA-Z]+)*)[\\.]([a-zA-Z]{2,3})$/;
 
             if(!regex.test(email)){
-                alert("Enter a valid email");
-                return false;
+                
+                return true;
             }      
-		
+		alert("Enter a valid email");
+		return false;
 	}
 
 	
 	function validatepswrd(mypswrd,mx,my)  
-	{  
-		var mypswrdlen = passid.value.length;  
-		if (mypswrdlen == 0 ||passid_len >= my || passid_len < mx)  
+	{  debugger;
+		var mypswrdlen = mypswrd.length;  
+		if (mypswrdlen == 0 ||mypswrdlen >= my || mypswrdlen < mx)  
 		{  
 			alert("Password should not be empty / length be between "+mx+" to "+my);  
 			mypswrd.focus();  

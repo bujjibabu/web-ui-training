@@ -38,16 +38,19 @@ function fncreaterow()
 		}    
 	}
 	function ValidateEmail(myemail)  
-	{  debugger;
-            var email = myemail.value;
+	{ 
+            var email = myemail;
             var regex = /^([0-9a-zA-Z]([-_\\.]*[0-9a-zA-Z]+)*)@([0-9a-zA-Z]([-_\\.]*[0-9a-zA-Z]+)*)[\\.]([a-zA-Z]{2,3})$/;
-
-            if(!regex.test(email)){
-                
-                return true;
-            }      
-		alert("Enter a valid email");
-		return false;
+            debugger;
+            if(regex.test(email)){
+                alert("success");
+                window.href="http://www.google.co.in"
+               // return true;
+            }else{
+            	  alert("enter valid email");
+				//return false;
+            }     
+		
 	}
 
 	

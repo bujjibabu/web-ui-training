@@ -3,11 +3,28 @@
 	<head>
 		<title>jQuery3</title>
 		<link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
+		<style type="text/css">
+			::-webkit-input-placeholder {
+			   color: red;
+			}
 
+			:-moz-placeholder { /* Firefox 18- */
+			   color: red;  
+			}
+
+			::-moz-placeholder {  /* Firefox 19+ */
+			   color: red;  
+			}
+
+			:-ms-input-placeholder {  
+			   color: red;  
+			}
+		</style>
 	</head>
 	<body>
 		<div class="container">
 			<div class="col-xs-12 col-md-6 col-md-offset-3">
+				<input type="text" placeholder="username">
 				<h4>JavaScript library (jQuery) practice.</h4>
 				<p>jQuery is used for DOM manipulation.</p>
 				<p>jQuery is used for CSS manipulation.</p>

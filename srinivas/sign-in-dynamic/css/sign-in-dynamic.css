@@ -6,6 +6,10 @@ body
     background-position: fixed;
     color: rgb(247, 8, 8);
 }
+.page-header
+{
+	border-bottom: 1px solid #F70808;
+}
 .header-text
 {
 	  color: rgb(247, 8, 8);
@@ -22,7 +26,12 @@ body
 }
 .form-control
 {
-	box-shadow: inset 0 1px 1px rgba(124, 8, 8, 1);
+	box-shadow: inset -1px 0px 2px rgba(247, 8, 8, 10);
+	background-color: none;
+}
+.form-group
+{
+	margin-bottom: 29px;
 }
 .form-data
 {
@@ -30,6 +39,8 @@ body
 	padding: 30px 14px 30px 14px;
 	background: none; 
 	box-shadow: 0 0 0.5em 0.5em rgb(247, 8, 8);
+	margin-top: 10%;
+	margin-bottom: 10%;
 }
 .transparent-glyph
 {
@@ -39,6 +50,7 @@ body
 .input-group-addon
 {
 	background-color: #000000;
+	border: 1px solid #5F0203;
 }
 
 .btn {
@@ -55,20 +67,26 @@ body
 	padding: 8px 20px 8px 20px;
 	text-decoration: none;
 	background:none;
+	margin-top: 18px;
 }
 
 .btn:hover {
-	background: #000000;
-	color: rgb(247, 8, 8);
+	background: rgb(247, 8, 8);
+	color: #000000;
 }
 input.transparent-input { 
     border:none !important
 }
-
 .transparent-input {
-   background-color: rgba(0, 0, 0, 0);
-   color: rgb(247, 8, 8);
-   border:none;
+    background-color: rgba(0, 0, 0, 0);
+    color: rgb(247, 8, 8);
+    border:none;
+}
+input:focus
+{ 
+    outline: none;
+    border: 1px solid #F10707;
+    box-shadow: 0px 0px 8px #F10707;
 }
 .first-name
 {
@@ -84,6 +102,10 @@ input.transparent-input {
 .label-text
 {
 	color: rgb(247, 8, 8);
+}
+.footer-divider
+{
+	border-top: 1px solid #F10707;
 }
 table
 {

@@ -1,0 +1,30 @@
+<!doctype <!DOCTYPE html>
+<html>
+<head>
+	<title>form validation  </title>
+</head>
+<script type="text/javascript">
+	function validateForm(){
+		var x=document.forms["myForm"]["fname"].vlaue;
+		if(x==null||x==" ")	
+{
+alert("Name must be filled out");
+retun false;
+}
+
+	}
+
+
+
+</script>
+
+<body>
+<form name="myform" action="demo-form.asp" onsubmit="retun validateForm()"  method="post">
+Name: <input type="text" name="fname">
+<input type="submit" vlaue="submit">
+</form>
+
+
+
+</body>
+</html>

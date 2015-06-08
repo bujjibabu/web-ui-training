@@ -1,0 +1,79 @@
+ <! doctype <!DOCTYPE html>
+ <html>
+ <head>
+ 	<title>form valdiadtion </title>
+<script type="text/javascript">
+	function validate(){
+
+if(document.myform.Name.value==" ")
+{
+
+alert(" pealse provie name");
+document.myform.Name.focus();
+return false;
+}
+if(document.myform.Email.value==" "){
+
+	alert("please provide email");
+	document.myform.Email.focus();
+	return false;
+}
+if(document.myform.Zipcode.value==" "){
+alert(" please provide email");
+document.myform.Zipcode.focus();
+rerun false;
+
+
+}
+if( document.myForm.Country.value == "-1" )
+{
+alert( "Please provide your country!" );
+return false;
+}
+return( true );
+
+	}
+
+
+</script>
+
+
+ </head>
+ <body>
+<form action="/cgi-bin/test.cgi" name="myform" onsubmit="return(validate());">
+<table cellspacing="2" cellpadding="2" border="1">
+<tr>
+<td align="right">Name</td>
+<td><input type="text" name="Name"></td>
+</tr>
+<tr>
+<td align="right">Email</td>
+<td> <input type="text" name="Email"></td>
+</tr>
+
+<tr>
+<td align="right">Zipcode</td>
+<td> <input type="text" name="Zipcode"></td>
+</tr>
+
+
+<tr>
+<td align="right">country</td>
+
+<td>
+<select name="Country">
+<option value="-1" selected>[choose yours]</option>
+<option value="1">USA</option>
+<option value="2">UK</option>
+<option value="3">INDIA</option>
+</select>
+</td>
+<tr>
+<td align="right"></td>
+<td><input type="submit" value="Submit" /></td></tr>
+</table></form>
+
+
+
+ </body>
+ </html>

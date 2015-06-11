@@ -18,23 +18,24 @@
 						<p class="my-paragraph-setdata"></p>
 						<p class="my-paragraph-setdata1"></p>
 						<a class="my-a">google.com</a>
+						<span></span>
 				</div>
 		</div>
 		<script type="text/javascript" src="../js/jquery-2.1.4.js"></script>
 		<script type="text/javascript">
 		$(document).ready(function(){ 
-			debugger;
-			console.log($('p').text());
+			
+			/*console.log($('p').text());
 			console.log($('p').html());
 			var data = 'this is by dynamic data';
 			var htmldata = '<b>this is by dynamic data</b>';
   			$('.my-paragraph-setdata').text(data);
   			$('.my-paragraph-setdata1').html(htmldata);
-  			$('.my-a').attr('href','https://api.jquery.com/category/events/');
+  			$('.my-a').attr('href','https://api.jquery.com/category/events/');*/
 
 
 			$( ".my-input" ).keypress(function() {
-  			console.log($('.my-input').val());
+  			 $("span").text(i += 1);
 			});
 			
 		});

@@ -2,40 +2,44 @@
 <html>
 <head>
 <title> JS sample </title>
+<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
 </head>
+<style type="text/css">
+.bb-para1{
+	display: none;
+	width: 400px;
+}
+.bb-para{
+	width: 400px;
+}
+</style>
 
 <body>
-	<div id="date"></div>
-	<button onclick="fnClick()">Sign in</button>
-<script type="text/javascript">{
-/*var d = new Date();
-var hours = d.getHours();
-var greeting;
-if (hours < 18) {
-    greeting = "Good day";
-}
-else{
-	greeting ="Good Evening"
-}
-document.getElementById("date").innerHTML = greeting;
-}*/
-/*var person = {name:"ravi", age :20};
-document.getElementById("date").innerHTML = person.name + " age is " + person.age;
-}*/
-var x= 12;
-var y = 13;
-var z;
-z= x+y;
-var a = "Ravi Teja is " + z + " years";
-function fnClick () {
+		<div class="container">
+			<div class="text-center">JQuery</div>
+				<div class="col-xs-12 col-sm-offset-2 col-sm-8">
+						<p class="wc">This is jquery welcome program</p>
+						<img src="Images/coffeecup2.jpg" class="bb-para"> 
+						<img src="Images/cupcoffee.jpg" class="bb-para1">
+						<br> 
+						<button class="myhide-btn btn btn-danger" id="hide">Hide Method</button>
+						<button class="myhide-btn btn btn-success" id="show">Show Method</button>
+				</div>
+		</div>
 
-document.getElementById("date").innerHTML = a;
-	
-}
-}
+<script type="text/javascript" src="js/jquery-2.1.4.js"></script>
+		<script type="text/javascript">
+		$("#hide").click(function(){
+	        $(".bb-para").hide("fast",function(){
+	        	$(".bb-para1").show("fast");
+	        });
+	  
+	    });
 
-</script>
-
-
+	    /*$("#show").click(function(){
+	        $("p").show();
+	        $("img").show(4000);
+	    });*/
+		</script>
 </body>
 </html>

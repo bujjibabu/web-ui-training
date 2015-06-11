@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Bootstrap</title>
+		<link rel="icon" href="../images/html_5_logo_128.png" sizes="16x16" type="image/png"> 
+		<link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
+	</head>
+	<body>
+		<div class="container">
+			<div class="text-center">JQuery</div>
+				<div class="col-xs-12 col-sm-offset-2 col-sm-8">
+						<p>
+							<b>Underscore.js is a JavaScript library which provides utility functions for common programming tasks. It is comparable to features provided by Prototype.js and the Ruby language, but opts for a functional programming design instead of extending object prototypes.
+							Underscore consists of a little more than 100 functions, which fall under four main categories depending on the datatypes which they manipulate: functions for manipulating arrays, functions for manipulating objects, functions for manipulating both arrays and objects (the name of the category is "Collections") and functions for manipulating other functions. There are also two utility categories : "Utility" and "Chaining".
+							</b>
+						</p>
+						<button class="btn btn-danger remove-btn">remove()</button>
+						<button class="btn btn-warning empty-btn">empty()</button>
+				</div>
+		</div>
+		<script type="text/javascript" src="../js/jquery-2.1.4.js"></script>
+		<script type="text/javascript">
+		$(document).ready(function(){ 
+			$('p').append('<i>some text appending to paragraph</i>');			
+			$('p').prepend('<strong>some text prepend to paragraph</strong>');
+			$('.remove-btn').click(function(){
+				$('p').remove();
+			});
+			$('.empty-btn').click(function(){
+				$('p').empty();
+			});	
+
+			/*$('p').css({'color':'red'});			
+			$('p').slideUp(2000);			
+			$('p').slideDown(2000);	*/
+		    $('p').css({'color':'red'}).slideUp(2000).slideDown(2000);
+
+		});
+		</script>
+	</body>
+</html>

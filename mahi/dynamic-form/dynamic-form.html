@@ -15,7 +15,7 @@
 			
 			<div class="col-xs-6 col-sm-6 mn-div2">
 				<h3>Create a Task</h3>
-				<form>
+				<div>
 					<div class="form-group">
 						<label>Task Name</label>
 						<input type="text" class="form-control task-name">
@@ -29,7 +29,7 @@
 						<input type="text" class="form-control assign">
 					</div>
 					<button class="btn btn-danger mn-button">Submit</button>
-				</form>
+				</div>
 			</div>
 
 			<div class="col-xs-6 col-sm-6 mn-div3">
@@ -70,7 +70,7 @@
 					document.getElementById("mn-table").innerHTML = tabledata;
 				}
 
-				tableCreation(); //calling the function tableCreation
+				
 
 				
 				$('.mn-button').click(function(){
@@ -81,11 +81,12 @@
 					//pushing the object(myobj) into the jsondata array (arrjson)
 					arrjson.unshift(myobj);
 					tableCreation();
-					$('.task-name').val() = '';
-					$('.date').val() = '';
-					$('.assign').val() = '';
+					$('.task-name').val('');
+					$('.date').val('');
+					$('.assign').val('');
 				});
 
+	tableCreation(); //calling the function tableCreation
 			});
 		</script>
 	</body>

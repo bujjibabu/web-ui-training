@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Bootstrap</title>
+		<link rel="icon" href="../images/html_5_logo_128.png" sizes="16x16" type="image/png"> 
+		<link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
+		<style type="text/css">
+			.my-div{
+				height: 200px;
+				width:200px;
+				display: none;
+				background:red;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<div class="text-center">JQuery</div>
+				<div class="col-xs-12">
+					<div class="my-div"></div>
+					<br/>
+					<button class="btn btn-warning btn-fadein">FadeIn</button>
+					<button class="btn btn-success btn-fadeout">FadeOut</button>
+					<button class="btn btn-success btn-fade-toggle">FadeToggle</button>
+					<button class="btn btn-success btn-fadeto">FadeTo</button>
+				</div>
+		</div>
+		<script type="text/javascript" src="../js/jquery-2.1.4.js"></script>
+		<script type="text/javascript">
+		$(document).ready(function(){
+			$('.btn-fadein').click(function(){
+				$('.my-div').fadeIn(6000);
+			});
+
+			$('.btn-fadeout').click(function(){
+				$('.my-div').fadeOut(6000);
+			});
+
+			$('.btn-fade-toggle').click(function(){
+				$('.my-div').fadeToggle(1000);
+			});
+			$('.btn-fadeto').click(function(){
+				$('.my-div').fadeTo(1000,0.9,function(){alert('done')}); //fadeTo(speed, opacity, callback)
+			});
+		});
+		</script>
+	</body>
+</html>

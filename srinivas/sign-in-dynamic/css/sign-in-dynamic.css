@@ -6,6 +6,21 @@ body
     background-position: fixed;
     color: rgb(247, 8, 8);
 }
+::-webkit-input-placeholder {
+	  color: red !important;
+	}
+
+	:-moz-placeholder { /* Firefox 18- */
+	   color: red;  
+	}
+
+	::-moz-placeholder {  /* Firefox 19+ */
+	   color: red;  
+	}
+
+	:-ms-input-placeholder {  
+	   color: red;  
+	}
 .page-header
 {
 	border-bottom: 1px solid #F70808;
@@ -52,7 +67,6 @@ body
 	background-color: #000000;
 	border: 1px solid #5F0203;
 }
-
 .btn {
 	-webkit-border-radius: 60;
 	-moz-border-radius: 60;
@@ -74,8 +88,9 @@ body
 	background: rgb(247, 8, 8);
 	color: #000000;
 }
-input.transparent-input { 
-    border:none !important
+input.transparent-input
+{ 
+	border:none !important
 }
 .transparent-input {
     background-color: rgba(0, 0, 0, 0);
@@ -85,7 +100,7 @@ input.transparent-input {
 input:focus
 { 
     outline: none;
-    border: 1px solid #F10707;
+    border: 2px solid green !important;
     box-shadow: 0px 0px 8px #F10707;
 }
 .first-name

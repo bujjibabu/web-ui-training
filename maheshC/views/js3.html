@@ -1,0 +1,89 @@
+<!doctype  html>
+<html>
+<head>
+	<title>		</title>
+<link rel="stylesheet"type="text/css" href="../css/bootstrap.css">
+<style type="text/css"> 
+
+.mymenu li{
+				background: black;
+				color:#fff;
+				padding: 10px 150px;
+				cursor: pointer;
+			}
+			.mymenu li:hover{
+				background: blue;
+			}
+			#about,
+			#contact{
+				display: none;
+			}
+
+</style>
+</head>
+
+
+
+<body>
+
+<div class="container">
+<ul class="list-unstyled list-inline mymenu">
+<li onclick="fnDashbord() ">dashbord</li>
+<li onclick="fnAbout()">about</li>
+<li onclick=" fnContact()">contact</li>
+</ul>
+
+<div id="dashbord">
+<h2>DashBord Page</h2>
+The beautiful, open source front-end SDK for developing hybrid mobile apps with HTML5.
+				Free and open source, Ionic offers a library of mobile-optimized HTML, CSS and JS components, gestures, and tools for building highly interactive apps. Built with Sass and optimized for AngularJS</div>
+
+				<div id="about">
+				<h2> about page</th2>
+				Open-source and free (under a permissive MIT license)
+				Built around Angular (Ember and Backbone not supported)
+				iOS and Android support (currently only WebKit supported devices)
+				Ionic is built to perform and behave great on the latest mobile devices. With minimal DOM manipulation, zero jQuery</div>
+
+				<div id="contact">
+				<h2> contact form</h2>
+
+<form id="myform">
+
+
+Fast Name:<input type="text" id="myfn"><br>
+Last Name:<input type="text" id="myln"><br>
+
+<button onclick="myfunction" >submit</button><br>
+<p id="catch" ></p>
+</form>
+</div>
+</div>
+<script type="text/javascript">
+function fnDashbord(){
+
+document.getElementById('dashbord').style.display="block";
+document.getElementById('about').style.display="none";
+document.getElementById('contact').style.display="none";
+
+};
+function fnAbout(){
+
+	document.getElementById('dashbord').style.display="none";
+document.getElementById('about').style.display="block";
+document.getElementById('contact').style.display="none";
+
+};
+function fnContact(){
+
+
+	document.getElementById('dashbord').style.display="none";
+document.getElementById('about').style.display="none";
+document.getElementById('contact').style.display="block";
+
+};
+
+
+
+</body>
+</html>

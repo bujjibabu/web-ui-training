@@ -38,23 +38,26 @@ function fncreaterow()
 		}    
 	}
 	function ValidateEmail(myemail)  
-	{  debugger;
-		// var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;  
-            var email = myemail.value;
-            var regex = /^([0-9a-zA-Z]([-_\\.]*[0-9a-zA-Z]+)*)@([0-9a-zA-Z]([-_\\.]*[0-9a-zA-Z]+)*)[\\.]([a-zA-Z]{2,9})$/;
-
-            if(!regex.test(email)){
-                alert("Enter a valid email");
-                return false;
-            }      
+	{ 
+            var email = myemail;
+            var regex = /^([0-9a-zA-Z]([-_\\.]*[0-9a-zA-Z]+)*)@([0-9a-zA-Z]([-_\\.]*[0-9a-zA-Z]+)*)[\\.]([a-zA-Z]{2,3})$/;
+            debugger;
+            if(regex.test(email)){
+                alert("success");
+                window.href="http://www.google.co.in"
+               // return true;
+            }else{
+            	  alert("enter valid email");
+				//return false;
+            }     
 		
 	}
 
 	
 	function validatepswrd(mypswrd,mx,my)  
-	{  
-		var mypswrdlen = passid.value.length;  
-		if (mypswrdlen == 0 ||passid_len >= my || passid_len < mx)  
+	{  debugger;
+		var mypswrdlen = mypswrd.length;  
+		if (mypswrdlen == 0 ||mypswrdlen >= my || mypswrdlen < mx)  
 		{  
 			alert("Password should not be empty / length be between "+mx+" to "+my);  
 			mypswrd.focus();  

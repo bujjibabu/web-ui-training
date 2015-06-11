@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+<head>
+<title> JS sample </title>
+<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+</head>
+<style type="text/css">
+.bb-para1{
+	display: none;
+	width: 400px;
+}
+.bb-para{
+	width: 400px;
+}
+</style>
+
+<body>
+		<div class="container">
+			<div class="text-center">JQuery</div>
+				<div class="col-xs-12 col-sm-offset-2 col-sm-8">
+						<p class="wc">This is jquery welcome program</p>
+						<img src="Images/coffeecup2.jpg" class="bb-para"> 
+						<img src="Images/cupcoffee.jpg" class="bb-para1">
+						<br> 
+						<button class="myhide-btn btn btn-danger" id="hide">Hide Method</button>
+						<button class="myhide-btn btn btn-success" id="show">Show Method</button>
+				</div>
+		</div>
+
+<script type="text/javascript" src="js/jquery-2.1.4.js"></script>
+		<script type="text/javascript">
+		$("#hide").click(function(){
+	        $(".bb-para").hide("fast",function(){
+	        	$(".bb-para1").show("fast");
+	        });
+	  
+	    });
+
+	    /*$("#show").click(function(){
+	        $("p").show();
+	        $("img").show(4000);
+	    });*/
+		</script>
+</body>
+</html>

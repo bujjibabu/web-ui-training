@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Bootstrap</title>
+		<link rel="icon" href="../images/html_5_logo_128.png" sizes="16x16" type="image/png"> 
+		<link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
+		<style type="text/css">
+			.my-div{
+				border:1px solid blue;
+				background: red;
+				height:100px;
+				width:100px;
+				position:relative;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<div class="text-center">JQuery Tables</div>
+			<div class="my-div"></div>
+			<br/>
+			<button class="btn btn-success btn-animate">Animate</button>
+
+		</div>
+	</div>
+		<script type="text/javascript" src="../js/jquery-2.1.4.js"></script>
+		<script type="text/javascript">
+		$(document).ready(function(){
+			$('.btn-animate').click(function(){
+				$('.my-div').animate({left:'250px',top:'0px'},3000);
+				$('.my-div').animate({left:'250px',top:'250px'},3000);
+				$('.my-div').animate({left:'0px',top:'250px'},3000);
+				$('.my-div').animate({left:'0px',top:'0px'},3000);
+
+				//animate({propertes},speed,callback);
+			});
+		});
+		</script>
+	</body>
+</html>

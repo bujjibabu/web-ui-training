@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+	<head>
+		<title>jQuery3</title>
+		<link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
+		<style type="text/css">
+			::-webkit-input-placeholder {
+			   color: red;
+			}
+
+			:-moz-placeholder { /* Firefox 18- */
+			   color: red;  
+			}
+
+			::-moz-placeholder {  /* Firefox 19+ */
+			   color: red;  
+			}
+
+			:-ms-input-placeholder {  
+			   color: red;  
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<div class="col-xs-12 col-md-6 col-md-offset-3">
+				<input type="text" placeholder="username">
+				<h4>JavaScript library (jQuery) practice.</h4>
+				<p>jQuery is used for DOM manipulation.</p>
+				<p>jQuery is used for CSS manipulation.</p>
+				<p>At present we are using jQuery 2.x version</p>
+				<p id="mn-p4">Practiced page on-load in the previous program</p>
+				<button class="btn btn-primary mn-button">Hide</button>
+				<p id="mn-p5"></p>
+			</div>
+		</div>
+		<script type="text/javascript" src="../js/jquery-2.1.4.js"></script>
+			<script type="text/javascript">
+				$(document).ready(function(){
+					$('*').css('color','blue');	
+				});
+				$('.mn-button').click(function(){
+					var myhead = $("h4").html();
+					//alert(myhead);
+					$('#mn-p4').hide(40000000,function(){
+						alert("call-back function hidden");
+						$('#mn-p5').html("Successfully hidden paragraph number four");
+					});
+				});	
+			</script>
+	</body>
+</html>

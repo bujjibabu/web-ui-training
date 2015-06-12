@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+	<head>
+		<title>jQuery attributes</title>
+		<link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
+
+	</head>
+	<body>
+		<div class="container mydiv">
+			<p>
+				The difference between attributes and properties can be important in specific situations. Before jQuery 1.6, the .attr() method sometimes took property values into account when retrieving some attributes, which could cause inconsistent behavior. As of jQuery 1.6, the .prop() method provides a way to explicitly retrieve property values, while .attr() retrieves attributes
+			</p>
+			<a class="myanchor">google.com</a>
+			<button class="btn btn-danger">button</button>
+		</div>
+		<script type="text/javascript" src="../js/jquery-2.1.4.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function(){
+				//$('p').html("<b>this is attribute practice.</b>");
+
+				//$('.myanchor').attr('href','https://www.google.com/?gws_rd=ssl');
+				//$('.mydiv').attr({'class':'col-xs-12', 'class':'col-xs-offset-3', 'class':'col-md-6', 'class':'col-md-offset-6'});
+				//$('.mydiv').attr('class','col-xs-offset-3');\
+				$('button').click(function(){
+					alert($('.mydiv').attr('class'));
+				})
+				
+			});
+		</script>
+	</body>
+</html>

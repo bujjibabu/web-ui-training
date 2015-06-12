@@ -1,0 +1,117 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Bootstrap</title>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+		<style type="text/css">
+			#firstTable,form{
+				padding: 40px;
+			}
+			h3{
+				padding-left: 40px !important;
+			}
+			.mytable{
+				border: 8px solid #F5F2F2;
+			}
+			.header{
+				  background: #F7F3F3;
+  					border: 5px solid rgb(231, 226, 226);
+			}
+			.content{
+				border: 4px solid rgb(232, 223, 223);
+			}
+			button{
+				  background: rgb(42, 35, 35) !important;
+ 				 color: #fff !important;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<div class="col-sm-12 header">
+				<h1>Task Tracker</h1>
+				<p class="text-muted">v2.0</p>
+			</div>
+			<div class="content clearfix">
+				<div class="col-xs-6">
+					<h3>Create Task</h3>
+					<form>
+					  <div class="form-group">
+					    <label><b>Task Name</b></label>
+					    <input type="text" class="form-control task-name">
+					  </div>
+					  <div class="form-group">
+					    <label><b>Date</b></label>
+					    <input type="text" class="form-control date">
+					  </div>
+					  <div class="form-group">
+					    <label><b>Asigned To</b></label>
+					    <input type="text" class="form-control asigned">
+					  </div>
+					  <button type="button" class="btn btn-default btn-submit">Submit</button>
+					</form>
+				</div>
+				<h3 class="col-xs-6">Existing Task</h3>
+				<div class="col-xs-6" id="firstTable"></div>
+			</div>
+		</div>
+		<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+		<script type="text/javascript">
+		$(document).ready(function(){
+		var myJsonData;
+		/*[
+				{"name": "Test Task #1", "date": "12/01/2012", "assigned": "John Doe" },
+				{"name": "Test Task #2", "date": "12/02/2012", "assigned": "John Doe" },
+				{"name": "Test Task #3", "date": "12/03/2012", "assigned": "John Doe" },
+				{"name": "Test Task #4", "date": "12/04/2012", "assigned": "John Doe" },
+				{"name": "Test Task #5", "date": "12/05/2012", "assigned": "John Doe" },
+				{"name": "Test Task #6", "date": "12/06/2012", "assigned": "John Doe" },
+				{"name": "Test Task #7", "date": "12/07/2012", "assigned": "John Doe" }
+			];*/
+
+		$.getJSON( "../data/mydata.json", function( result ) {
+			myJsonData = result;
+			if(myJsonData.length>0){
+				createTable();
+			}
+		//console.log(data);
+		});
+
+		function createTable(){
+			var myArraylength = myJsonData.length;
+		    var tablecontents = "";
+			    tablecontents = '<table class="table table-striped table-responsive mytable">';
+			    for (var i = 0; i < myArraylength; i ++)
+			   {
+			      tablecontents += "<tr>";
+			      tablecontents += "<td><b>" +  myJsonData[i].name + "</b>&nbsp;<span>" + myJsonData[i].date + "</span></td>";
+			      tablecontents += "<td>" +  myJsonData[i].assigned + "</td>";
+			      tablecontents += "</tr>";
+			   }
+			   tablecontents += "</table>";
+			    document.getElementById("firstTable").innerHTML = tablecontents;
+			}
+			
+			
+		    $('.btn-submit').click(function(){
+		    	var myObj = {};
+		    	myObj.name = $('.task-name').val();
+		    	myObj.date = $('.date').val();
+		    	myObj.assigned = $('.asigned').val();
+		    	myJsonData.unshift(myObj);
+		    	console.log(myJsonData);
+		    	createTable();
+		    	$('.task-name').val('');
+		    	$('.date').val('');
+		    	$('.asigned').val('');
+		    });
+		});
+		</script>
+	</body>
+</html>
+
+
+
+
+
+ 

@@ -1,0 +1,27 @@
+<!doctype html>
+<html data-ng-app="myApp">
+	<head>
+		<title>Bootstrap</title>
+		<link rel="icon" href="../images/html_5_logo_128.png" sizes="16x16" type="image/png"> 
+		<link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
+	</head>
+	<body>
+		<div class="container">
+			<div ng-controller="myController">
+				Name: {{myname}}
+				<br/>
+				Mobile: {{mobile}}
+			</div>
+		</div>
+		<script type="text/javascript" src="../js/jquery-2.1.4.js"></script>
+		<script type="text/javascript" src="../js/angular.js"></script>
+		<script type="text/javascript">
+			var myApp = angular.module('myApp',[]);
+			myApp.controller('myController',function($scope){
+				$scope.myname = 'bujji';
+				$scope.mobile = 9533068603;
+				//code
+			})
+		</script>
+	</body>
+</html>

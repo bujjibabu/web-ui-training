@@ -1,0 +1,26 @@
+<!doctype html>
+<html ng-app="">
+	<head>
+		<title>Bootstrap</title>
+		<link rel="icon" href="../images/html_5_logo_128.png" sizes="16x16" type="image/png"> 
+		<link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
+	</head>
+	<body>
+		<div class="container">
+				<div class="text-center">Angularjs</div>
+				<div class="col-xs-12">
+					sum of 1 and 2 : {{1+2}}
+				</div>
+				<div class="form-group col-xs-3">
+					<label>UserName:</label>
+					<input type="text" placeholder="Enter Your name" class="form-control" ng-model="uname"/>
+				</div>
+				<p class="clearfix"/>
+				<p class="col-sm-12">Welcome {{uname}}</p>
+				<p class="col-sm-12">Welcome <span ng-bind="uname"></span></p>
+		</div>
+		<script type="text/javascript" src="../js/jquery-2.1.4.js"></script>
+		<script type="text/javascript" src="../js/angular.js"></script>
+		<script type="text/javascript"></script>
+	</body>
+</html>

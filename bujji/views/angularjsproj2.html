@@ -1,0 +1,23 @@
+<!doctype html>
+<html data-ng-app="">
+	<head>
+		<title>Bootstrap</title>
+		<link rel="icon" href="../images/html_5_logo_128.png" sizes="16x16" type="image/png"> 
+		<link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
+	</head>
+	<body>
+		<div class="container">
+			<div data-ng-init="myName='bujji';number='9533068603'">
+				<input type="text" ng-model="myName">
+			</div>
+			<p>Welcome {{myName}}</p>
+			<p>mobile {{number}}</p>
+			<p>mobile <span data-ng-bind="number"></span></p>
+		</div>
+		<script type="text/javascript" src="../js/jquery-2.1.4.js"></script>
+		<script type="text/javascript" src="../js/angular.js"></script>
+		<script type="text/javascript">
+
+		</script>
+	</body>
+</html>

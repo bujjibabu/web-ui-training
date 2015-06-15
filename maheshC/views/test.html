@@ -1,0 +1,109 @@
+<!doctype <!DOCTYPE html>
+<html>
+<head>
+	<title>test </title>
+<link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
+
+
+</head>
+<body>
+<div class="container">
+<div class="col-xs-12 col-sm-12 mn-div1">
+<h2> cricket team</h2>
+</div>
+
+<div class="col-xs-6 col-sm-6 mn-div2">
+<h2> team members</h2>
+<div>
+           <div class="form-group">
+           <lable >player name</lable>
+           <input type="text" class="form-control player-name">
+           </div>
+       
+
+       <div class="form-group">
+           <lable >date</lable>
+           <input type="text" class="form-control date">
+           </div>
+
+ <div class="form-group">
+           <lable >assigned to </lable>
+           <input type="text" class="form-control coach">
+           
+           </div>
+					<button class="btn btn-danger mn-button">Submit</button>
+			
+			</div>
+
+</div>
+
+
+
+<script type="text/javascript" src="../js/jquery-2.1.4.js" >
+</script>
+
+
+<script type="text/javascript">
+	$(document).ready(function(){
+
+var mjson=[
+{name:"Test1",date:"12/01/2015 ": assigned:" gunguly"},
+{name:"Test2",date:"12/01/2015 ": assigned:" gunguly"},
+{name:"Test3",date:"12/01/2015 ": assigned:" gunguly"},
+{name:"Test4",date:"12/01/2015 ": assigned:" gunguly"},
+{name:"Test5",date:"12/01/2015 ": assigned:" gunguly"},
+{name:"Test6",date:"12/01/2015 ": assigned:" gunguly"},
+{name:"Test7",date:"12/01/2015 ": assigned:" gunguly"},
+{name:"Test8",date:"12/01/2015 ": assigned:" gunguly"},
+{name:"Test9",date:"12/01/2015 ": assigned:" gunguly"},
+{name:"Test10",date:"12/01/2015 ": assigned:" gunguly"}
+]};
+
+
+function tablecreation(){
+var arrlength=mjson.length;
+var tabledata=" " ;
+
+tabledata='<table class="table table-striped table-responsive">';
+
+
+for( i=0;i<arrlength;i++){
+
+
+	tabledata += "<tr>";
+						tabledata += "<td><b>" +mjson[i].name +"</b>&nbsp;<span>" + mjson[i].date + "</span></td>";
+
+						tabledata += "<td>" + mjson[i].assigned + "</td>";
+						tabledata += "</tr>";
+}
+
+
+
+tabledata += "</table>";
+
+document.getElementById("mn-table").innerHTML = tabledata;
+
+}
+
+	
+				$('.mn-button').click(function(){
+					var myobj ={};
+					myobj.name = $('.player-  ').val();
+					myobj.date = $('.date').val();
+					myobj.assigned = $('.coach').val();
+					//pushing the object(myobj) into the jsondata array (arrjson)
+					arrjson.unshift(myobj);
+					tableCreation();
+					$('.player-name').val('');
+					$('.date').val('');
+					$('.coach').val('');
+				});
+
+	tableCreation(); //calling the function tableCreation
+			});
+
+
+</script>
+
+</body>
+</html>

@@ -76,6 +76,7 @@
 		<script type="text/javascript" src="../js/angular.js"></script>
 		<script type="text/javascript">
 			var myApp = angular.module('myApp',[]);
+
 			myApp.controller('myController',function($scope){
 				$scope.myData =  [
 						{"name": "Test Task #1", "date": "12/01/2012", "assigned": "John Doe" },
@@ -84,7 +85,6 @@
 						{"name": "Test Task #4", "date": "12/04/2012", "assigned": "John Doe" },
 						{"name": "Test Task #5", "date": "12/05/2012", "assigned": "John Doe" }
 					];
-
 				$scope.fnSubmitDetails = function(){
 					$scope.myObj = {};
 					$scope.myObj.name = $scope.taskname;
@@ -95,6 +95,7 @@
 				}
 				//code
 			});
+
 		</script>
 	</body>
 </html>

@@ -1,0 +1,68 @@
+<!doctype html>
+<html  ng-app="myApp">
+	<head>
+		<title>Bootstrap</title>
+		<link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
+		<style type="text/css">
+		tr th{
+			cursor: pointer;
+		}
+		</style>
+	</head>
+	<body ng-controller="myController">
+		<div class="container">
+			<h3 class="col-sm-12">Table</h3>
+			<div class="col-sm-12"><input type="text" placeholder="search" ng-model="searchQuery"></div>
+			<p class="clearfix"/>
+				<div class="col-xs-12">
+					<table class="table table-bordered">
+						<thead>
+							<tr ng-init="sort='name';reverseOrder=true;">
+								<th ng-click="sort='name';reverseOrder=!reverseOrder">Nmae 
+									<span ng-show="sort=='name'" ng-class="(reverseOrder==true) && 'glyphicon glyphicon-chevron-down' || 'glyphicon glyphicon-chevron-up' "></span>
+								</th>
+								<th ng-click="sort='date';reverseOrder=!reverseOrder">Date
+								 <span ng-show="sort=='date'" ng-class="(reverseOrder==true) && 'glyphicon glyphicon-chevron-down' || 'glyphicon glyphicon-chevron-up' "></span>
+								</th>
+								<th ng-click="sort='assigned';reverseOrder=!reverseOrder">Assigned 
+									<span ng-show="sort=='assigned'" ng-class="(reverseOrder==true) && 'glyphicon glyphicon-chevron-down' || 'glyphicon glyphicon-chevron-up' "></span>
+								</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr data-ng-repeat="obj in myData | filter:searchQuery | orderBy:sort:reverseOrder">
+								<td>{{obj.name}}</td>
+								<td>{{obj.date}}</td>
+								<td>{{obj.assigned}}</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		<script type="text/javascript" src="../js/jquery-2.1.4.js"></script>
+		<script type="text/javascript" src="../js/angular.js"></script>
+		<script type="text/javascript">
+			var myApp = angular.module('myApp',[]);
+			myApp.controller('myController',function($scope){
+				$scope.myData =  [
+						{"name": "Test Task #1", "date": "12/01/2015", "assigned": "John Doe" },
+						{"name": "Test Task #2", "date": "14/01/2015", "assigned": "bujji" },
+						{"name": "Test Task #3", "date": "18/01/2015", "assigned": "ravi" },
+						{"name": "Test Task #4", "date": "11/01/2015", "assigned": "mahesh" },
+						{"name": "Test Task #5", "date": "08/01/2015", "assigned": "bhanu" }
+					];
+				
+				//(condition)? 'sta1' : 'sta2';
+				//(condition) && 'sta1' || 'sta2';
+				//code
+			});
+
+		</script>
+	</body>
+</html>
+
+
+
+
+
+ 

@@ -1,0 +1,42 @@
+<!doctype html>
+<html data-ng-app="myApp">
+	<head>
+		<title>AngularJS1</title>
+		<link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
+
+	</head>
+	<body data-ng-controller="myController">
+		<div class="container">
+			<table class="table table-bordered table-striped text-center col-xs-12">
+				<thead>
+					<tr>
+						<th class="text-center">Name</th>
+						<th class="text-center">Date</th>
+						<th class="text-center">Assigned</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr data-ng-repeat="ob in arrjson | filter: searchQuery">
+						<td ng-bind="ob.name"></td>
+						<td ng-bind="ob.date"></td>
+						<td ng-bind="ob.assigned"></td>
+					</tr>
+				</tbody>
+			</table>
+			<input type="text" placeholder="search" ng-model="searchQuery">
+		</div>
+		<script type="text/javascript" src="../js/jquery-2.1.4.js"></script>
+		<script type="text/javascript" src="../js/angular.js"></script>
+		<script type="text/javascript">
+
+			var app = angular.module('myApp',[]);
+			app.controller('myController',function($scope){
+				$scope.arrjson = [
+				 {name:"Task#1", date:"1", assigned:"mahesh"},
+				 {name:"Task#2", date:"12", assigned:"suresh"},
+				 {name:"Task#3", date:"5", assigned:"ramesh"}];
+			})
+				 
+		</script>
+	</body>
+</html>

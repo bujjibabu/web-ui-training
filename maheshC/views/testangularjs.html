@@ -1,0 +1,50 @@
+<!doctype <!DOCTYPE html>
+<html>
+<head>
+	<title> angular js </title>
+</head>
+<body>
+<h2> sample angular s</h2>
+ 	<div ng-app="mainapp" ng-controller="studentcontroller">
+		Enter first name:<input type="text" ng-model="student.firstName"><br><br>
+		
+		Enter last Name:<input type="text" ng-model="student.lastname"><br><br>
+
+		you are entering:{{student.fullname()}}
+	</div>
+<script type="text/javascript" src="../js/jquery-2.1.4.js"></script>
+
+<script type="text/javascript" src="../js/angular.js">
+	
+			var mainapp=angular.module("mainapp",[ ]);
+			
+mainapp.controller('studentcontroller',function($scope))
+ 
+ {
+
+			$scope.student={
+
+				firstName:"challa",
+
+				lastname:"mahesh",
+			
+				    fullname:function(){
+			
+				    var studentObject;
+			
+				    studentObject=$scope.student;
+
+				    return studentObject.firstName+"  "+ studentObject.lastname;
+  
+                                         }
+
+                             };
+
+
+ });
+
+
+
+</script>
+</body>
+</html>

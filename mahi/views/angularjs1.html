@@ -1,0 +1,48 @@
+<!doctype html>
+<html ng-app="myApp">
+	<head>
+		<title>AngularJS1</title>
+		<link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
+		<style type="text/css">
+			tr th{
+				cursor: pointer;
+			}
+		</style>
+
+	</head>
+	<body ng-controller="myController">
+		<div class="container">
+			<table class="table table-bordered table-striped text-center">
+				<thead>
+					<tr ng-init="sort='name';reverseOrder=true">
+						<th class="text-center" ng-click="sort='id';reverseOrder=!reverseOrder">EmployeeId <span ng-class="(reverseOrder==true) && 'glyphicon glyphicon-chevron-down'||'glyphicon glyphicon-chevron-up'"></th>
+						<th class="text-center" ng-click="sort='name';reverseOrder=!reverseOrder">Name<span ng-class="(reverseOrder==true) && 'glyphicon glyphicon-chevron-down'||'glyphicon glyphicon-chevron-up'"></span></th>
+						<th class="text-center" ng-click="sort='city';reverseOrder=!reverseOrder">City <span ng-class="(reverseOrder==true) && 'glyphicon glyphicon-chevron-down'||'glyphicon glyphicon-chevron-up'"></th>
+						<th class="text-center" ng-click="sort='mobilenum';reverseOrder=!reverseOrder">MobileNumber <span ng-class="(reverseOrder==true) && 'glyphicon glyphicon-chevron-down'||'glyphicon glyphicon-chevron-up'"></th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr ng-repeat="object in tablevalues | orderBy : sort: reverseOrder">
+						<td ng-bind="object.id"></td>
+						<td ng-bind="object.name"></td>
+						<td ng-bind="object.city"></td>
+						<td ng-bind="object.mobilenum"></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		
+		<script type="text/javascript" src="../js/angular.js"></script>
+		<script type="text/javascript">
+			angular.module('myApp',[]).controller('myController',function($scope){
+				$scope.tablevalues = [
+				{id:'1',name:'mahesh',city:'pittsburgh',mobilenum:'3374967291'},
+				{id:'2',name:'ravi',city:'richmond',mobilenum:'3374562132'},
+				{id:'3',name:'sathish',city:'seattle',mobilenum:'5464967291'},
+				{id:'4',name:'yuva',city:'dallas',mobilenum:'1234967291'},
+				{id:'5',name:'karthik',city:'houston',mobilenum:'3357487729'}];
+			});
+
+		</script>
+	</body>
+</html>

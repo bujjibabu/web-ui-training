@@ -1,43 +1,36 @@
 <! dccotype <!DOCTYPE html>
 <html>
-<head>
-	<title> angular js coteoolres </title>
+		<head>
+				<title> angular js coteoolres </title>
 
-	<link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
-</head>
-<body>
+				<link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
+				</head>
+		<body>
 
-<div ng-app="myapp" ng-controller="mycontroller">
+					<div data-ng-app="myApp" ng-controller="mycontroller">
 
-firstname:<input type="text" ng-model="firstname"><br>
+					firstname:<input type="text" ng-model="firstname"><br>
 
-lastname:<input type="text"   ng-model="lastname"><br>
+					lastname:<input type="text"   ng-model="lastname"><br>
 
-<br>
-Full name: {{firstname + " " +lastname}}
+					<br>
+					Full name: {{firstname + " " +lastname}}
 
-</div>
+					</div>
 
-<script type="text/javascript" src="../js/jquery-2.1.4.js"></script>
-			<script type="text/javascript"></script>
+		<script type="text/javascript" src="../js/jquery-2.1.4.js"></script>
+		<script type="text/javascript"></script>
 		<script type="text/javascript" src="../js/angular.js">
 
-var app=angular.model('myapp',[]);
+		var myApp=angular.module('myApp',[]);
 
-app.controller('mycontroller',function($scope)){
+		myApp.controller('mycontroller',function($scope){
 
-$scope.firstname="mahesh";
+		$scope.firstname="mahesh";
 
-$scope.lastname="challa";
-});
-
-
-
+		$scope.lastname="challa";
+		});
 
 		</script>
-	
-
-		
-
-</body>
+		</body>
 </html>

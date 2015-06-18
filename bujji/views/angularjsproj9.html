@@ -1,0 +1,156 @@
+<!doctype html>
+<html  ng-app="myApp">
+	<head>
+		<title>Bootstrap</title>
+		<link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
+		<style type="text/css">
+			#firstTable,form{
+				padding: 40px;
+			}
+			h3{
+				padding-left: 40px !important;
+			}
+			.mytable{
+				border: 8px solid #F5F2F2;
+			}
+			.header{
+				  background: #F7F3F3;
+  					border: 5px solid rgb(231, 226, 226);
+			}
+			.content{
+				border: 4px solid rgb(232, 223, 223);
+			}
+			button{
+				  background: rgb(42, 35, 35) !important;
+ 				 color: #fff !important;
+			}
+			.my-delete-icon{
+				cursor: pointer;
+			}
+		</style>
+	</head>
+	<body ng-controller="myController">
+		<div class="container">
+			<div class="col-sm-12 header">
+				<h1>Task Tracker</h1>
+				<p class="text-muted">v2.0</p>
+			</div>
+			<div class="content clearfix">
+				<div class="col-xs-6">
+					<h3>Create Task</h3>
+					<form>
+					  <div class="form-group">
+					    <label><b>Task Name</b></label>
+					    <input type="text" class="form-control task-name" ng-model="taskname">
+					  </div>
+					  <div class="form-group">
+					    <label><b>Date</b></label>
+					    <input type="text" class="form-control date" ng-model="date">
+					  </div>
+					  <div class="form-group">
+					    <label><b>Asigned To</b></label>
+					    <input type="text" class="form-control asigned" ng-model="asigned">
+					  </div>
+					  <button type="button" class="btn btn-default btn-submit" ng-click="fnSubmitDetails()">Submit</button>
+					</form>
+				</div>
+				<h3 class="col-xs-6">Existing Task</h3>
+				<div class="col-xs-6">
+					<table class="table table-bordered">
+						<thead>
+							<tr>
+								<th>S.No</th>
+								<th>Nmae</th>
+								<th>Date</th>
+								<th>Assigned</th>
+								<th>Delete</th>
+								<th>View</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr data-ng-repeat="obj in myData">
+								<td>{{$index + 1 }}</td>
+								<td>{{obj.name}}</td>
+								<td>{{obj.date}}</td>
+								<td>{{obj.assigned}}</td>
+								<td ng-click="fnDelete($index)" class="text-center"><span class="glyphicon glyphicon-trash my-delete-icon"></span></td>
+								<td ng-click="fnView()"  type="button" class="text-center" data-toggle="modal" data-target=".bs-example-modal-lg"><span  class="glyphicon glyphicon-eye-open"></span></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<!-- Large modal -->
+				<!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-lg">Large modal</button> -->
+			</div>
+		</div>
+		<!--modal box starting -->
+		<div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+		  <div class="modal-dialog modal-lg">
+		    <div class="modal-content">
+		     <table class="table table-bordered">
+		     	<tr>
+		     		<td>name1</td>
+		     		<td>name2</td>
+		     		<td>nmae3</td>
+		     	</tr>
+		     </table>
+		    </div>
+		  </div>
+		</div>
+		<!--modal box ending-->
+
+		<script type="text/javascript" src="../js/jquery-2.1.4.js"></script>
+		<script type="text/javascript" src="../js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="../js/angular.js"></script>
+		<script type="text/javascript">
+			var myApp = angular.module('myApp',[]);
+
+			myApp.controller('myController',function($scope){
+				$scope.myData =  [
+						{"name": "Test Task #1", "date": "12/01/2012", "assigned": "bujji" },
+						{"name": "Test Task #2", "date": "12/02/2012", "assigned": "ravi" },
+						{"name": "Test Task #3", "date": "12/03/2012", "assigned": "mahesh" },
+						{"name": "Test Task #4", "date": "12/04/2012", "assigned": "raja" },
+						{"name": "Test Task #5", "date": "12/05/2012", "assigned": "bhanu" }
+					];
+
+				$scope.fnSubmitDetails = function(){
+					var tempObj = {};
+					tempObj.name = $scope.taskname;
+					tempObj.date = $scope.date;
+					tempObj.assigned = $scope.asigned;
+					$scope.myData.unshift(tempObj);
+					$scope.taskname ='';
+					$scope.date = '';
+					$scope.asigned = '';
+					//console.log("tempObj===============>",tempObj);
+				}
+				$scope.fnDelete = function(selectedIndex){
+					//alert(selectedIndex);
+					$scope.myData.splice(selectedIndex,1);
+					//$scope.myData.pop();
+				};
+
+				$scope.fnView = function(){
+					
+				}
+				/*$scope.fnSubmitDetails = function(){
+					$scope.myObj = {};
+					$scope.myObj.name = $scope.taskname;
+					$scope.myObj.date = $scope.date;
+					$scope.myObj.assigned = $scope.asigned;
+					console.log($scope.myObj);
+					$scope.myData.unshift($scope.myObj);
+				}*/
+				//code
+			});
+
+		</script>
+	</body>
+</html>
+
+
+
+
+
+ 

@@ -1,0 +1,78 @@
+<!doctype html>
+<html  ng-app="myApp">
+	<head>
+		<title>Bootstrap</title>
+		<link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
+		<style type="text/css">
+		tr th{
+			cursor: pointer;
+		}
+		</style>
+	</head>
+	<body ng-controller="myController">
+		<div class="container">
+			<form class="col-sm-offset-4 col-sm-4">
+			  <div class="form-group">
+			    <label for="exampleInputEmail1">Country</label>
+			   	<select class="form-control" data-ng-model="selectcountry">
+			   		<option ng-repeat ="county in contries">{{county.name}}</option>
+			   		<option value="" disabled>--Select Country--</option>
+			   	</select>
+			  </div>
+			   <div class="form-group">
+			    <label for="exampleInputEmail1">Country</label>
+			   <!--  color.name for color in colors -->
+			   	<select class="form-control" data-ng-model="selectanothercountry" ng-options="country.name for country in contries" ng-change="fnSelectCountry(selectanothercountry)"></select>
+			  </div>
+
+			  <div>Second Model value: {{selectanothercountry}}</div>
+			  <div class="form-group">
+			    <label for="exampleInputPassword1">Password</label>
+			    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+			  </div>
+			  <div class="form-group">
+			    <label for="exampleInputFile">File input</label>
+			    <input type="file" id="exampleInputFile">
+			    <p class="help-block">Example block-level help text here.</p>
+			  </div>
+			  <div class="checkbox">
+			    <label>
+			      <input type="checkbox"> Check me out
+			    </label>
+			  </div>
+			  <button type="submit" class="btn btn-default">Submit</button>
+			</form>
+			<div>Selected country : {{selectcountry}}</div>
+		</div>
+		<script type="text/javascript" src="../js/jquery-2.1.4.js"></script>
+		<script type="text/javascript" src="../js/angular.js"></script>
+		<script type="text/javascript">
+			var myApp = angular.module('myApp',[]);
+			myApp.controller('myController',function($scope){
+				$scope.myData =  [
+						{"name": "Test Task #1", "date": "12/01/2015", "assigned": "John Doe" },
+						{"name": "Test Task #2", "date": "14/01/2015", "assigned": "bujji" },
+						{"name": "Test Task #3", "date": "18/01/2015", "assigned": "ravi" },
+						{"name": "Test Task #4", "date": "11/01/2015", "assigned": "mahesh" },
+						{"name": "Test Task #5", "date": "08/01/2015", "assigned": "bhanu" }
+					];
+				
+				$scope.contries = [{name:'U.S.A',id:1},{name:'India',id:2},{name:'U.K',id:3}];
+				$scope.selectanothercountry = $scope.contries[0];
+				$scope.fnSelectCountry = function(index){
+					// var x = result;
+					// console.log(obj)
+					$scope.myData.splice(index,1);
+
+				}
+			});
+
+		</script>
+	</body>
+</html>
+
+
+
+
+
+ 

@@ -1,0 +1,124 @@
+<!doctype html>
+<html ng-app="myCrudApp">
+	<head>
+		<title>AngularCRUD</title>
+		<link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
+	</head>
+	<body ng-controller="myCrudController">
+		<div class="container">
+			<!--<div class="col-xs-12">{{successobj.key}}</div>-->
+			<div class="col-xs-6">
+				<h4>Create Task</h4>
+				<div class="form-group">
+					<label>Name</label>
+					<input type="text" class="form-control" ng-model="username">
+				</div>
+				<div class="form-group">
+					<label>City</label>
+					<input type="text" class="form-control" ng-model="usercity">
+				</div>
+				<div class="form-group">
+					<label>Country</label>
+					<input type="text" class="form-control" ng-model="usercountry">
+				</div>
+				<div class="form-group">
+					<label>Zip Code</label>
+					<input type="text" class="form-control" ng-model="userzip">
+				</div>
+				<button class="btn btn-primary" ng-click="fnSubmit()" ng-show="!editFlag">Submit</button>
+				<button class="btn btn-primary" ng-click="fnUpdate()" ng-show="editFlag">Update</button>
+			</div>
+			<br/>
+			<div class="col-xs-6">
+				<table class="table table-bordered table-striped">
+					<thead>
+						<tr>
+							<th>SNO</th>
+							<th>Name</th>
+							<th>City</th>
+							<th>Country</th>
+							<th>Zip Code</th>
+							<th>Delete</th>
+							<th>Update</th>
+							<!--<th>View</th>-->
+						</tr>
+					</thead>
+					<tbody>
+						<tr ng-repeat="ob in myArray">
+							<td ng-bind="$index + 1"></td>
+							<td ng-bind="ob.name"></td>
+							<td ng-bind="ob.city"></td>
+							<td ng-bind="ob.country"></td>
+							<td ng-bind="ob.zip"></td>
+							<td class="text-center"><i class="glyphicon glyphicon-trash" ng-click="fnDelete($index)"></i></td>
+							<td class="text-center"><i class="glyphicon glyphicon-pencil" ng-click="fnEdit($index,ob)"></i></td>
+							<!--<td><i class="glyphicon glyphicon-eye-open" ng-click="fnView()"></i></td>-->
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+		<script type="text/javascript" src="../js/jquery-2.1.4.js"></script>
+		<script type="text/javascript" src="../js/angular.js"></script>
+		<script type="text/javascript">
+
+		//Initializing myCrud Application
+			angular.module('myCrudApp',[]).controller('myCrudController',function($scope){
+
+				$scope.editFlag = false;
+				//Declaring an empty array
+				$scope.myArray = []; 
+				//Creating table data(record) on clicking button submit		
+				$scope.fnSubmit = function(){
+					//Declaring an empty object named myobj
+					$scope.myobj ={};
+					//Assigning values to the keys in the myobj object
+
+					$scope.myobj.name = $scope.username;
+					$scope.myobj.city = $scope.usercity;
+					$scope.myobj.country = $scope.usercountry;
+					$scope.myobj.zip = $scope.userzip;
+					$scope.myArray.push($scope.myobj);
+
+					$scope.username ='';
+					$scope.usercity ='';
+					$scope.usercountry ='';
+					$scope.userzip ='';
+				};
+				//Deleting a record (row) from a table
+				$scope.fnDelete = function(x){
+					$scope.myArray.splice(x,1);
+				};
+				// editing the record(row)
+				$scope.fnEdit = function(x,y){
+
+					$scope.tempobjindex = x;
+					$scope.editFlag = true;
+					$scope.username = y.name;
+					$scope.usercity = y.city;
+					$scope.usercountry = y.country;
+					$scope.userzip = y.zip;
+				};
+				// updating the current record
+				$scope.fnUpdate = function(){
+					$scope.tempobj = {};
+					$scope.tempobj.name = $scope.username;
+					$scope.tempobj.city = $scope.usercity;
+					$scope.tempobj.country = $scope.usercountry;
+					$scope.tempobj.zip = $scope.userzip;
+
+					$scope.myArray[$scope.tempobjindex] = $scope.tempobj;
+					$scope.editFlag = false;
+					$scope.username ='';
+					$scope.usercity ='';
+					$scope.usercountry ='';
+					$scope.userzip ='';
+
+				};
+				/*$scope.successobj = {};
+				$scope.successobj.key = 'Successfully performed crud operations';*/
+			});
+
+		</script>
+	</body>
+</html>

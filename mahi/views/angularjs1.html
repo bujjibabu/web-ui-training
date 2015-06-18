@@ -7,14 +7,37 @@
 			tr th{
 				cursor: pointer;
 			}
+			body{
+				background-image: url(../images/img.jpg);
+			}
 		</style>
 
 	</head>
 	<body ng-controller="myController">
 		<div class="container">
+			<div class="form-group col-xs-6 col-xs-offset-3">
+				<label>Employee Id</label>
+				<input type="text" class="form-control" ng-model="empid">
+			</div>
+			<div class="form-group col-xs-6 col-xs-offset-3">
+				<label>Employee Name</label>
+				<input type="text" class="form-control" ng-model="empname">
+			</div>
+			<div class="form-group col-xs-6 col-xs-offset-3">
+				<label>City</label>
+				<input type="text" class="form-control" ng-model="empcity">
+			</div>
+			<div class="form-group col-xs-6 col-xs-offset-3">
+				<label>Mobile Number</label>
+				<input type="text" class="form-control" ng-model="mobnum">
+			</div>
+			<div class="text-center col-xs-6 col-xs-offset-3">
+				<button class="btn btn-success" ng-click="fnSubmit()">submit</button>
+			</div>
+			<p class="clearfix"></p>
 			<table class="table table-bordered table-striped text-center">
 				<thead>
-					<tr ng-init="sort='name';reverseOrder=true">
+					<tr ng-init="sort='id';reverseOrder=true">
 						<th class="text-center" ng-click="sort='id';reverseOrder=!reverseOrder">EmployeeId <span ng-class="(reverseOrder==true) && 'glyphicon glyphicon-chevron-down'||'glyphicon glyphicon-chevron-up'"></th>
 						<th class="text-center" ng-click="sort='name';reverseOrder=!reverseOrder">Name<span ng-class="(reverseOrder==true) && 'glyphicon glyphicon-chevron-down'||'glyphicon glyphicon-chevron-up'"></span></th>
 						<th class="text-center" ng-click="sort='city';reverseOrder=!reverseOrder">City <span ng-class="(reverseOrder==true) && 'glyphicon glyphicon-chevron-down'||'glyphicon glyphicon-chevron-up'"></th>
@@ -30,6 +53,7 @@
 					</tr>
 				</tbody>
 			</table>
+			
 		</div>
 		
 		<script type="text/javascript" src="../js/angular.js"></script>
@@ -41,6 +65,22 @@
 				{id:'3',name:'sathish',city:'seattle',mobilenum:'5464967291'},
 				{id:'4',name:'yuva',city:'dallas',mobilenum:'1234967291'},
 				{id:'5',name:'karthik',city:'houston',mobilenum:'3357487729'}];
+			
+
+			$scope.fnSubmit = function(){
+
+				$scope.myobj = {};
+				$scope.myobj.id = $scope.empid;
+				$scope.myobj.name = $scope.empname;
+				$scope.myobj.city = $scope.empcity;
+				$scope.myobj.mobilenum = $scope.mobnum;
+				$scope.tablevalues.unshift($scope.myobj);
+				$scope.empid ='';
+				$scope.empname = '';
+				$scope.empcity = '';
+				$scope.mobnum = '';
+			};
+			
 			});
 
 		</script>

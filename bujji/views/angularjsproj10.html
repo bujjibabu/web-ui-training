@@ -1,0 +1,194 @@
+<!doctype html>
+<html  ng-app="myApp">
+	<head>
+		<title>Bootstrap</title>
+		<link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
+		<style type="text/css">
+			#firstTable,form{
+				padding: 40px;
+			}
+			h3{
+				padding-left: 40px !important;
+			}
+			
+			.form-content{
+				border: 4px solid rgb(232, 223, 223);
+			}
+			button{
+				  background: rgb(42, 35, 35) !important;
+ 				 color: #fff !important;
+			}
+			.alert{
+				display: none;
+			}
+			</style>
+	</head>
+	<body ng-controller="myController">
+		<div class="container">
+			<!-- alert message starting-->
+			<div class="col-xs-offset-2 col-xs-8 alert alert-success alert-dismissible fade in" role="alert">
+		      <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">X</span></button>
+		      <strong>{{editObjectIndex}}</strong> is updated Successfully.
+		    </div>
+		    <!-- alert msg ending-->
+			<div class="content clearfix">
+				<div class="col-xs-6">
+					<div class="form-content">
+						<h3>Create Task</h3>
+						<form>
+						  <div class="form-group">
+						    <label><b>Task Name</b></label>
+						    <input type="text" class="form-control task-name" ng-model="taskmodel">
+						  </div>
+						  <div class="form-group">
+						    <label><b>Date</b></label>
+						    <input type="text" class="form-control date" ng-model="datemodel">
+						  </div>
+						  <div class="form-group">
+						    <label><b>Asigned To</b></label>
+						    <input type="text" class="form-control asigned" ng-model="asignedmodel">
+						  </div>
+						  <button type="button" class="btn btn-default btn-submit" ng-click="fnSubmitDetails()" data-ng-hide="editFlag">Submit</button>
+
+						  <button type="button" class="btn btn-default btn-submit" ng-click="fnUpdateRecord()" data-ng-show="editFlag">Update</button>
+						</form>
+					</div>
+				</div>
+				<div class="col-xs-6">
+					<div class="form-content">
+						<table class="table table-bordered table-striped">
+							<thead>
+								<tr>
+									<th>S.No</th>
+									<th>Task Name</th>
+									<th>Date</th>
+									<th>Asigned To</th>
+									<th>Delete</th>
+									<th>View</th>
+									<th>Edit</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr ng-repeat="obj in totalArray">
+									<td data-ng-bind="$index+1"></td>
+									<td data-ng-bind="obj.task"></td>
+									<td data-ng-bind="obj.date"></td>
+									<td data-ng-bind="obj.asigned"></td>
+									<td class="text-center"><i class="glyphicon glyphicon-trash" data-ng-click="fnDelete($index)"></i></td>
+									<td class="text-center"><i  data-toggle="modal" data-target=".bs-example-modal-sm" class="glyphicon glyphicon-eye-open" data-ng-click="fnView(obj)"></i></td>
+									<td class="text-center"><i data-ng-click="fnEdit($index,obj)" class="glyphicon glyphicon-pencil"></i></td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--modal box starting -->
+		<!-- Small modal -->
+
+			<div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+			  <div class="modal-dialog" role="document">
+			    <div class="modal-content">
+			      <div class="modal-header">
+			        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+			        <h4 class="modal-title" id="gridSystemModalLabel">Modal View</h4>
+			      </div>
+			      <div class="modal-body">
+			       <table class="table table-bordered table-striped">
+						<thead>
+							<tr>
+								<th>Task Name</th>
+								<th>Date</th>
+								<th>Asigned To</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td data-ng-bind="myViewObject.task"></td>
+								<td data-ng-bind="myViewObject.date"></td>
+								<td data-ng-bind="myViewObject.asigned"></td>
+							</tr>
+						</tbody>
+					</table>
+			      </div>
+			      <div class="modal-footer">
+			        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+			        <button type="button" class="btn btn-primary">Save changes</button>
+			      </div>
+			    </div><!-- /.modal-content -->
+			  </div><!-- /.modal-dialog -->
+			</div><!-- /.modal -->
+		<!--modal box ending-->
+
+
+
+		<script type="text/javascript" src="../js/jquery-2.1.4.js"></script>
+		<script type="text/javascript" src="../js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="../js/angular.js"></script>
+		<script type="text/javascript">
+			var myApp = angular.module('myApp',[]);
+			myApp.controller('myController',function($scope){
+				$scope.totalArray = [];
+				$scope.editFlag=false;
+				//adding row into table
+				$scope.fnSubmitDetails = function(){
+					var tempObject = {};
+					//$scope.tempObject = {};
+					tempObject.task = $scope.taskmodel;
+					tempObject.date = $scope.datemodel;
+					tempObject.asigned = $scope.asignedmodel;
+					console.log('This is my dynamic Object', tempObject);
+					$scope.totalArray.push(tempObject);
+					console.log('This is my dynamic array',$scope.totalArray);
+					//empty values
+					$scope.taskmodel = '';
+					$scope.datemodel ='';
+					$scope.asignedmodel = '';
+					//stuff
+				};
+
+				//deleting row from the table
+				$scope.fnDelete = function(index){
+					$scope.totalArray.splice(index,1);
+					//ajax call
+				};
+
+			 //view the object
+			 $scope.fnView = function(currentObj){
+			 	console.log(currentObj);
+			 	$scope.myViewObject = currentObj;
+			 };
+			//edit functionality
+			$scope.fnEdit = function(index,object){
+				//console.log(index);
+				//console.log(object);
+				$scope.editObjectIndex = index;
+				$scope.editFlag=true;
+				$scope.taskmodel = object.task;
+				$scope.datemodel = object.date;
+				$scope.asignedmodel = object.asigned;
+			};
+		//updated functionality
+		$scope.fnUpdateRecord = function(){
+			var tempObject1 = {};
+				tempObject1.task = $scope.taskmodel;
+				tempObject1.date = $scope.datemodel;
+				tempObject1.asigned = $scope.asignedmodel;
+			$scope.totalArray[$scope.editObjectIndex] = tempObject1;
+			$scope.editFlag=false;
+			$scope.taskmodel = '';
+			$scope.datemodel ='';
+			$scope.asignedmodel = '';
+			$('.alert').css({"display":"block"});
+		};
+	 });
+		</script>
+	</body>
+</html>
+
+
+
+
+
+ 

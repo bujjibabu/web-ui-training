@@ -1,0 +1,25 @@
+<!doctype html>
+<html >
+	<head>
+		<title>MADHU</title>
+		<link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
+	</head>
+	<body ng-app="">
+		<div class="container">
+			<div class="text-center"> hi angular js</div>
+			<div class="col-xs-12">
+					sum of 1 and 2 : {{1+2}}
+				</div>
+			<div class="form-group col-xs-3">
+				<lable> username</lable>
+				<input type="text" placeholder="Enter Your name" class="form-control" ng-model="uname"/>
+			</div>
+			<p class="clearfix"/>
+			<p class="col-sm-12">welcome {{uname}}</p>
+			<p class="col-sm-12">check here <span ng-bind="uname"></span></p>
+			<div ng-bind="uname"></div>
+		</div>
+		<script type="text/javascript" src="../js/jquery-2.1.4.js"></script>
+		<script type="text/javascript" src="../js/angular.js"></script>
+	</body>
+</html>

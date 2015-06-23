@@ -1,0 +1,38 @@
+<!doctype <!DOCTYPE html>
+<html ng-app="myApp">
+		<head>
+		<title>angualr html page </title>
+		<link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
+		</head>
+				<body>
+
+				<div class="container">
+				<header>
+
+						<ul class="nav-pills">
+						<li role="presentation" class="active"><a href="#/page2">Home</a></li>
+						<li role="presentation"><a href="#/page3">profile</a></li>
+						<li role="presentation"><a href="#/page4">messages</a></li>
+						</ul>
+				</header>
+				      <div ng-view></div>
+					<footer>
+
+					&copy; copy rights are reserved 2000
+
+					</footer>
+				</div>
+				<script type="text/javascript" src="../js/jquery-2.1.4.js"></script>
+				<script type="text/javascript" src="../js/bootstrap.min.js"></script>
+				<script type="text/javascript" src="../js/angular.js"></script>
+				<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.16/angular-route.min.js"></script>
+				<script type="text/javascript" src="main.js"></script>
+				<script type="text/javascript" src="page2ctrl.js"></script>
+				<script type="text/javascript" src="page3ctrl.js"></script>
+				<script type="text/javascript" src="page4ctrl.js"></script>
+
+
+
+
+				</body>
+</html>

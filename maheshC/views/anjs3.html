@@ -1,0 +1,136 @@
+ <!DOCTYPE html>
+<html>
+<head>
+	<title>my company details </title>
+<link rel="stylesheet"  type="text/css" href=" ../css/bootstrap.css">
+<style type="text/css">
+#firstTable,form{
+				padding: 40px;
+			}
+			h3{
+				padding-left: 40px !important;
+			}
+			.mytable{
+				border: 8px solid #F5F2F2;
+			}
+			.header{
+				  background: #F7F3F3;
+  					border: 5px solid rgb(231, 226, 226);
+			}
+			.content{
+				border: 4px solid rgb(232, 223, 223);
+			}
+			button{
+				  background: rgb(42, 35, 35) !important;
+ 				 color: #fff !important;
+			}
+
+</style>
+</head>
+	<body ng-app="myapp" ng-controller="mycontroller"> 
+
+	  <div class="conatiner">
+			<div class="col-sm-12  header">
+			<h1> <center>Inno minds</center> </h1>
+			<p class="text-muted"><center>its free envirionment</center></p>
+			</div>
+     
+<div class="col-xs-6">
+<h3>Enter  Developer</h3>
+   <form>
+		<div class="form-group">
+		<label><b>Developer</b></label>
+		<input type="text" class="form-control "ng-model="developer">
+		</div>
+
+    <div class="form-group">
+    <label><b>skills </b></label>
+    <input type="text" class="form-control" ng-model="skills">
+    </div>
+
+             <div class="form-group">
+             <label><b>Experince </b></label>
+             <input type="text" class="form-control" ng-model="exp">
+             </div>
+
+    <div class="form-group">
+    <label><b>current project </b></label>
+    <input type="text" class="form-control"ng-model="cp">
+    </div>
+
+       <button type="button" class="btn btn-default btn-submit"  ng-click="fnsubmit()">submit</button>
+
+     </form>
+   </div> 
+<div class="col-xs-6">
+<h3> all developers</h3>
+<table class="table table-bordered">
+<thead>
+<tr>
+<th>Sno</th>
+<th>Developer name</th>
+<th>skills</th>
+<th>Experince</th>
+<th>current project</th>
+
+</tr>
+</thead>
+<tbody>
+	<tr data-ng-repeat="obj in mydeveloper">
+	<td>{{$index+1}}</td>
+	<td>{{obj.developer}}</td>
+	<td>{{obj.skills}}</td>
+	<td>{{obj.exp}}</td>
+	<td>{{obj.cp}}</td>
+
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+<script type="text/javascript" src="../js/jquery-2.1.4.js"></script>
+		<script type="text/javascript" src="../js/angular.js"></script>
+		<script type="text/javascript">
+
+var myapp=angular.module('myapp',[]);
+myapp.controller('mycontroller',function($scope){
+
+$scope.mydeveloper=[
+
+
+        { "developer" : "testtask", "cp" : "Enter" , "exp" : "0", "skills" : "nill"},
+
+        { "developer" : "testtask", "cp" : "Enter" , "exp" : "0", "skills" : "nill"},
+
+        { "developer" : "testtask", "cp" : "Enter" , "exp" : "0", "skills" : "nill"},
+
+        { "developer" : "testtask", "cp" : "Enter" , "exp" : "0", "skills" : "nill"},
+
+        { "developer" : "testtask", "cp" : "Enter" , "exp" : "0", "skills" : "nill"},
+
+
+        { "developer" : "testtask", "cp" : "Enter" , "exp" : "0", "skills" : "nill"},
+
+        { "developer" : "testtask", "cp" : "Enter" , "exp" : "0", "skills" : "nill"},
+
+
+        ];
+
+$scope.fnsubmit=function(){
+
+  $scope.myobj={};
+  $scope.myobj.developer=$scope.developer;
+  $scope.myobj.skills=$scope.skills;
+  $scope.myobj.exp=$scope.exp;
+  $scope.myobj.currentproject=$scope.cp;
+  console.log($scope.myObj);
+  $scope.mydeveloper.unshift($scope.myObj);
+}
+});
+
+
+
+</script>
+	</body>
+</html>

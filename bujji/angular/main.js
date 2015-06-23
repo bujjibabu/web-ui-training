@@ -14,6 +14,6 @@ myApp.config(function($routeProvider) {
       templateUrl:'page4.html'
     })
     .otherwise({
-      redirectTo:'/page2'
+      redirectTo:'/page3'
     });
 })
